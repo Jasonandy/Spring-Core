@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <!-- 父级依赖 -->
+  <parent>
+       <artifactId>Spring-Core</artifactId>
+       <groupId>cn.ucaner.spring</groupId>
+       <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>spring-learning-demo</artifactId>
+  <packaging>war</packaging>
+
+  <name>spring-learning-demo</name>
+  <url>http://spring-learning-demo.ucaner.cn</url>
+
+  <properties>
+        <spring.version>4.3.8.RELEASE</spring.version>
+  </properties>
+
+  <dependencies>
+  
+  		<!-- junit -->	
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- spring-beans -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- spring-context-support -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- spring-aop -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.3</version>
+            <optional>true</optional>
+        </dependency>
+        
+        
+		<!-- commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <finalName>spring-core</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+        	<plugins>
+        		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+        		<plugin>
+        			<groupId>org.eclipse.m2e</groupId>
+        			<artifactId>lifecycle-mapping</artifactId>
+        			<version>1.0.0</version>
+        			<configuration>
+        				<lifecycleMappingMetadata>
+        					<pluginExecutions>
+        						<pluginExecution>
+        							<pluginExecutionFilter>
+        								<groupId>
+        									org.apache.maven.plugins
+        								</groupId>
+        								<artifactId>
+        									maven-resources-plugin
+        								</artifactId>
+        								<versionRange>
+        									[2.6,)
+        								</versionRange>
+        								<goals>
+        									<goal>resources</goal>
+        								</goals>
+        							</pluginExecutionFilter>
+        							<action>
+        								<ignore></ignore>
+        							</action>
+        						</pluginExecution>
+        					</pluginExecutions>
+        				</lifecycleMappingMetadata>
+        			</configuration>
+        		</plugin>
+        	</plugins>
+        </pluginManagement>
+    </build>
+
+</project>
