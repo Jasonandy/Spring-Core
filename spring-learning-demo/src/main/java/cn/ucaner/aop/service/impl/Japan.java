@@ -1,18 +1,19 @@
-package cn.ucaner.app.service.impl;
+package cn.ucaner.aop.service.impl;
 
 
-import cn.ucaner.app.service.Person;
+import cn.ucaner.aop.service.Person;
 
 /**
-* @Package：cn.ucaner.app.service.impl   
+* @Package：cn.ucaner.aop.service.impl   
 * @ClassName：Japan   
-* @Description：   <p> TODO</p>
+* @Description：   <p> Japan </p>
 * @Author： -    newtonk
 * @Modify By：   
 * @Modify marker：   
 * @version    V1.0
  */
 public abstract class Japan implements Person {
+	
 	private SteelAxe steelaxe;
 
 	// 定义抽象方法，该方法用于获取被依赖的bean

@@ -1,7 +1,7 @@
-package cn.ucaner.app.service;
+package cn.ucaner.aop.service;
 
 /**
-* @Package：cn.ucaner.app.service   
+* @Package：cn.ucaner.aop.service   
 * @ClassName：Person   
 * @Description：   <p> Person </p>
 * @Author： -    

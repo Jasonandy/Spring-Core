@@ -1,7 +1,7 @@
-package cn.ucaner.app.aspect;
+package cn.ucaner.aop.aspect;
 
 /**
-* @Package：cn.ucaner.app.aspect   
+* @Package：cn.ucaner.aop.aspect   
 * @ClassName：AspectBiz   
 * @Description：   <p> AspectBiz </p>
 * @Author： - Jason   
@@ -12,6 +12,7 @@ package cn.ucaner.app.aspect;
 * @version    V1.0
  */
 public class AspectBiz {
+	
 	public void biz() {
 		System.out.println("Aspect Biz..");
 	}

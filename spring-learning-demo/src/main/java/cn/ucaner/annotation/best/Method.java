@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
 * @Package：cn.ucaner.annotation.best   
 * @ClassName：Method   
-* @Description：   <p> TODO</p>
+* @Description：   <p> Method</p>
 * </br> https://github.com/759796385/spring-leanring-demo 
 * </p>
 * @Author： - newtonk    
@@ -21,5 +21,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Method {
+	
     public String param() default "";
 }

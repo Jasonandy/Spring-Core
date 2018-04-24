@@ -1,9 +1,9 @@
-package cn.ucaner.app.event;
+package cn.ucaner.aop.event;
 
 import org.springframework.context.ApplicationEvent;
 
 /**
-* @Package：cn.ucaner.app.event   
+* @Package：cn.ucaner.aop.event   
 * @ClassName：EmailEvent   
 * @Description：   <p> EmailEvent</p>
 * @Author： -    newtonk
@@ -14,6 +14,7 @@ import org.springframework.context.ApplicationEvent;
 public class EmailEvent extends ApplicationEvent {
 	
 	private static final long serialVersionUID = 7626614311960858428L;
+	
 	private String address;
 	private String text;
 

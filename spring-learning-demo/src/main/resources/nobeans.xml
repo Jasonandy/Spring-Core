@@ -11,10 +11,11 @@
 	http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 	
 	<!-- 自动搜索组件bean，自动搜索切面类 -->
-	<context:component-scan base-package="cn.ucaner.app.aspect">
+	<context:component-scan base-package="cn.ucaner.aop.aspect">
 		<context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect"/>
 	</context:component-scan>
 	
 	<!-- 启动@AspectJ支持 -->
 	<aop:aspectj-autoproxy/>
+	
 </beans>		

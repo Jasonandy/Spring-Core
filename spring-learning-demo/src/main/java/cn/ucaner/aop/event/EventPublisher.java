@@ -1,10 +1,10 @@
-package cn.ucaner.app.event;
+package cn.ucaner.aop.event;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 
 /**
-* @Package：cn.ucaner.app.event   
+* @Package：cn.ucaner.aop.event   
 * @ClassName：EventPublisher   
 * @Description：   <p> EventPublisher </p>
 * @Author： -    newtonk
@@ -13,6 +13,7 @@ import org.springframework.context.ApplicationEventPublisherAware;
 * @version    V1.0
  */
 public class EventPublisher implements ApplicationEventPublisherAware{
+	
     private ApplicationEventPublisher applicationEventPublisher;
 
     @Override

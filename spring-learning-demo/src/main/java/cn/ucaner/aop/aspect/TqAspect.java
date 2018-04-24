@@ -1,4 +1,4 @@
-package cn.ucaner.app.aspect;
+package cn.ucaner.aop.aspect;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
 /**
-* @Package：cn.ucaner.app.aspect   
+* @Package：cn.ucaner.aop.aspect   
 * @ClassName：TqAspect   
 * @Description：   <p> TqAspect </p>
 * @Author： - Jason   

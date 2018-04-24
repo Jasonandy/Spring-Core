@@ -9,8 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-import cn.ucaner.app.event.EmailEvent;
-import cn.ucaner.app.service.Person;
+import cn.ucaner.aop.event.EmailEvent;
+import cn.ucaner.aop.service.Person;
 
 /**
 * @Package：cn.ucaner.tang   
@@ -22,6 +22,7 @@ import cn.ucaner.app.service.Person;
 * @version    V1.0
  */
 public class BeanTest {
+	
     @SuppressWarnings("resource")
     public static void main(String[] args) {
 //        codeForIOC();
@@ -35,7 +36,7 @@ public class BeanTest {
     public static void codeForIOC() {
         // 使用beanFactory初始化
         // 使用beanFactory初始化不会预初始化bean
-        Resource resource = new ClassPathResource("beans.xml");
+        Resource resource = new ClassPathResource("calsspath:beans.xml");
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         new XmlBeanDefinitionReader(beanFactory).loadBeanDefinitions(resource);
         System.out.println("-----容器启动成功-------");

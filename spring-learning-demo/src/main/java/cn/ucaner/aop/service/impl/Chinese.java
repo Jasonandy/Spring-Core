@@ -1,13 +1,13 @@
-package cn.ucaner.app.service.impl;
+package cn.ucaner.aop.service.impl;
 
 
-import cn.ucaner.app.service.Axe;
-import cn.ucaner.app.service.Person;
+import cn.ucaner.aop.service.Axe;
+import cn.ucaner.aop.service.Person;
 
 /**
-* @Package：cn.ucaner.app.service.impl   
+* @Package：cn.ucaner.aop.service.impl   
 * @ClassName：Chinese   
-* @Description：   <p> TODO</p>
+* @Description：   <p> Chinese</p>
 * @Author： -    newtonk
 * @Modify By：   
 * @Modify marker：   

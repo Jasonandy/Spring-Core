@@ -9,30 +9,30 @@
     
 	<context:annotation-config/>
 	
-	<context:component-scan base-package="cn.ucaner.app.service.impl" />  
+	<context:component-scan base-package="cn.ucaner.aop.service.impl" />  
 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 	
-	<!-- 配置名为person的bean，其实现类是cn.ucaner.app.service.Person 懒cn.ucaner.app.service.impl.America惰式加载-->
-	<bean id="chinese" class="cn.ucaner.app.service.impl.Chinese" lazy-init="true" >
+	<!-- 配置名为person的bean，其实现类是cn.ucaner.aop.service.Person 懒cn.ucaner.aop.service.impl.America惰式加载-->
+	<bean id="chinese" class="cn.ucaner.aop.service.impl.Chinese" lazy-init="true" >
 		<!-- 控制调用setAxe（）方法，将容器中的axe Bean作为传入参数 -->
 		<property name="axe" ref="steelaxe"/>
 		<!-- 调用setTest方法 -->
 		<property name="test" value="孙悟空"/>
 	</bean>
 	
-	<bean id="america" class="cn.ucaner.app.service.impl.America" scope="prototype">
+	<bean id="america" class="cn.ucaner.aop.service.impl.America" scope="prototype">
 		<!-- 构造注入 -->
 		<!-- 使用了注解<constructor-arg ref="steelaxe"/> -->
 		<constructor-arg ref="steelaxe"/>
 	</bean>
 	
-	<bean id="japan" class="cn.ucaner.app.service.impl.Japan">
+	<bean id="japan" class="cn.ucaner.aop.service.impl.Japan">
 		<!-- Spring只要检测到lookup-method元素，自动为name属性指定的方法提供实现体 -->
 		<lookup-method name="getSteelAxe" bean="steelaxe"/>
 	</bean>
 	
-	<bean id="stoneaxe" class="cn.ucaner.app.service.impl.StoneAxe"/>
-	<bean id="steelaxe" class="cn.ucaner.app.service.impl.SteelAxe" scope="prototype"/>
+	<bean id="stoneaxe" class="cn.ucaner.aop.service.impl.StoneAxe"/>
+	<bean id="steelaxe" class="cn.ucaner.aop.service.impl.SteelAxe" scope="prototype"/>
 	
 	<!-- 配置国际化 -->
 	
@@ -47,10 +47,10 @@
 	
 	
 	<!-- 配置监听器 -->
-	<bean class="cn.ucaner.app.listener.EmailNotifier"/>
-	<bean id="awaretest" class="cn.ucaner.app.service.ApplicationContextAwareTest"/>
+	<bean class="cn.ucaner.aop.listener.EmailNotifier"/>
+	<bean id="awaretest" class="cn.ucaner.aop.service.ApplicationContextAwareTest"/>
 	<bean id="date" class="java.util.Date"/>
-	<bean id="init" class="cn.ucaner.app.service.Left"/>
+	<bean id="init" class="cn.ucaner.aop.service.Left"/>
 	
 	<!-- 指定bean实例的getter方法返回值定义成一个新的bean -->
 	<bean id="field" class="org.springframework.beans.factory.config.PropertyPathFactoryBean">

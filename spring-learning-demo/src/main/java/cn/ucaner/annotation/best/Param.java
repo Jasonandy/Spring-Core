@@ -6,10 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 
 * @Package：cn.ucaner.annotation.best   
 * @ClassName：Param   
-* @Description：   <p> TODO</p>
+* @Description：   <p> Param</p>
 * </br> https://github.com/759796385/spring-leanring-demo 
 * </p>
 * @Author： - newtonk    
@@ -22,5 +21,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
 public @interface Param {
+	
     public String onlyStart() default "";
 }

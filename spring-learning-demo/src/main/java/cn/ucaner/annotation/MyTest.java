@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 /**
 * @Package：cn.ucaner.annotation   
 * @ClassName：MyTest   
-* @Description：   <p> TODO</p>
+* @Description：   <p> MyTest </p>
 * </br> https://github.com/759796385/spring-leanring-demo 
 * </p>
 * @Author： - newtonk    
@@ -16,19 +16,18 @@ import java.lang.reflect.Field;
 * @version    V1.0
  */
 public class MyTest {
-    @Try(color="白色")
+	
+    @Try(color="Red")
     private static String color;
 
     public static void main(String[] args) throws Exception {
-        Class c = Class.forName("com.newtonk.annotation.MyTest");
-//       boolean result =  c.isAnnotationPresent(Try.class);
-//        System.out.println(result);
-        Field[] field = c.getDeclaredFields();
-        for (Field field1 : field) {
-            boolean result =  field1.isAnnotationPresent(Try.class);
+        Class<?> c = Class.forName(MyTest.class.getName());
+        Field[] fields = c.getDeclaredFields();
+        for (Field field : fields) {
+            boolean result =  field.isAnnotationPresent(Try.class);
             System.out.println(result);
             if (result) {
-                Try a = field1.getAnnotation(Try.class);
+                Try a = field.getAnnotation(Try.class);
                 System.out.println(a.color());
             }
         }

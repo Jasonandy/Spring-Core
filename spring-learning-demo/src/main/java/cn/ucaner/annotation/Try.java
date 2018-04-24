@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
 * @Package：cn.ucaner.annotation   
 * @ClassName：Try   
-* @Description：   <p> TODO</p>
+* @Description：   <p>注解 - Try </p>
 * </br> https://github.com/759796385/spring-leanring-demo 
 * </p>
 * @Author： - newtonk    
@@ -21,6 +21,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Try {
+	
     public enum Color{RED,BLUE,YELLOW,NONE}
 
     public String color() default "NONE";

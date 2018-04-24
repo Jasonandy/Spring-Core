@@ -10,7 +10,7 @@
 	
 	<aop:config>
 		<aop:aspect id="taAspectAOP" ref="aspectBiz" >
-			<aop:pointcut expression="execution(* cn.ucaner.app.aspect.AspectBiz.*(..))" id="tqPiontcut"/>
+			<aop:pointcut expression="execution(* cn.ucaner.aop.aspect.AspectBiz.*(..))" id="tqPiontcut"/>
 			<aop:before method="before" pointcut-ref="tqPiontcut"/>
 		</aop:aspect>
 	</aop:config>

@@ -12,6 +12,7 @@ import java.util.Arrays;
 * @version    V1.0
  */
 public class TestA {
+	
     public static void main(String[] args) {
         String[] i =new String[1000000];
         for(int num=0;num<1000000;num++)

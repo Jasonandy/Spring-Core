@@ -1,11 +1,11 @@
-package cn.ucaner.app.factory;
+package cn.ucaner.aop.factory;
 
 import org.springframework.beans.factory.FactoryBean;
 
 import java.lang.reflect.Field;
 
 /**
-* @Package：cn.ucaner.app.factory   
+* @Package：cn.ucaner.aop.factory   
 * @ClassName：PersonFactory   
 * @Description：   <p> PersonFactory </p>
 * @Author： -    newtonk
@@ -14,6 +14,7 @@ import java.lang.reflect.Field;
 * @version    V1.0
  */
 public class PersonFactory implements FactoryBean<Object> {
+	
     private String targetClass;
     private String targetFiled;
 

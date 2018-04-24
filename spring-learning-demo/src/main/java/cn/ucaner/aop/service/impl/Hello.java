@@ -1,11 +1,11 @@
-package cn.ucaner.app.service.impl;
+package cn.ucaner.aop.service.impl;
 
 import org.springframework.stereotype.Component;
 
 /**
-* @Package：cn.ucaner.app.service.impl   
+* @Package：cn.ucaner.aop.service.impl   
 * @ClassName：Hello   
-* @Description：   <p> TODO</p>
+* @Description：   <p> Hello</p>
 * @Author： -    newtonk
 * @Modify By：   
 * @Modify marker：   
@@ -13,8 +13,9 @@ import org.springframework.stereotype.Component;
  */
 @Component("hello")
 public class Hello {
+	
 	public void foo() {
-		System.out.println("执行hello组件的foo（）方法");
+		System.out.println("执行hello组件的foo()方法");
 	}
 
 	public String addUser(String name, String pass) {

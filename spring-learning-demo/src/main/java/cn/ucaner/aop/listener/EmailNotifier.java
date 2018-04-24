@@ -1,13 +1,12 @@
-package cn.ucaner.app.listener;
+package cn.ucaner.aop.listener;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 
-import cn.ucaner.app.event.EmailEvent;
-
+import cn.ucaner.aop.event.EmailEvent;
 
 /**
-* @Package：cn.ucaner.app.listener   
+* @Package：cn.ucaner.aop.listener   
 * @ClassName：EmailNotifier   
 * @Description：   <p> EmailNotifier </p>
 * @Author： -    newtonk

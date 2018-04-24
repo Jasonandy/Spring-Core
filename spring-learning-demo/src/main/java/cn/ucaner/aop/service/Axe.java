@@ -1,7 +1,7 @@
-package cn.ucaner.app.service;
+package cn.ucaner.aop.service;
 
 /**
-* @Package：cn.ucaner.app.service   
+* @Package：cn.ucaner.aop.service   
 * @ClassName：Axe   
 * @Description：   <p> 斧头 </p>
 * @Author： -  
@@ -10,5 +10,7 @@ package cn.ucaner.app.service;
 * @version    V1.0
  */
 public interface Axe {
+	
 	public String chop();
+	
 }

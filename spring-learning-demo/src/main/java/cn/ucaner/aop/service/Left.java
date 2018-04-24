@@ -1,4 +1,4 @@
-package cn.ucaner.app.service;
+package cn.ucaner.aop.service;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 /**
-* @Package：cn.ucaner.app.service   
+* @Package：cn.ucaner.aop.service   
 * @ClassName：Left   
 * @Description：   <p> Left</p>
 * @Author： -    
