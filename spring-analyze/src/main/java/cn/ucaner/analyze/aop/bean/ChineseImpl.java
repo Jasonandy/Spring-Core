@@ -15,6 +15,6 @@ public class ChineseImpl implements Chinese{
     
     // 定义一个 eat() 方法
     public void eat(String food){
-        System.out.println("我正在吃 :"+ food);
+        System.out.println("I'm eating  :"+ food);
     }
 }
