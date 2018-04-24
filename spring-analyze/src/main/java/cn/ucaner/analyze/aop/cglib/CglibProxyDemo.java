@@ -1,6 +1,5 @@
 package cn.ucaner.analyze.aop.cglib;
 
-
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -11,15 +10,14 @@ public class CglibProxyDemo implements MethodInterceptor {
 
     private Enhancer enhancer = new Enhancer();
 
-    public Object getProxy(Class clazz) {
+    public Object getProxy(Class<?> clazz) {
         enhancer.setSuperclass(clazz);
         enhancer.setCallback(this);
         return enhancer.create();
     }
 
     @Override
-    public Object intercept(Object obj, Method method, Object[] args,
-                            MethodProxy proxy) throws Throwable {
+    public Object intercept(Object obj, Method method, Object[] args,MethodProxy proxy) throws Throwable {
         //打印入参日志
         StringBuilder builder = new StringBuilder();
         if (args != null) {

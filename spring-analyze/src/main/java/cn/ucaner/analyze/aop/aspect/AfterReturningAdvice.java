@@ -21,10 +21,7 @@ public class AfterReturningAdvice {
 
     }
 
-
-
-
-    @Pointcut("execution(* com.houlu.java.spring.aop.bean.Chinese.sayHello(..))")
+    @Pointcut("execution(* cn.ucaner.analyze.aop.bean.Chinese.sayHello(..))")
     public void chinese() {}
 
 }

@@ -9,14 +9,12 @@ public class FactoryBeanTest {
 
     public static void main(String[] args) {
         // 创建 Spring 容器
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-config/spring-core.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:/spring-config/spring-core.xml");
         Car car = ctx.getBean(Car.class);
         car.driveCar();
         car.saleCar();
         System.out.println(ctx.getBean("&carFactory").getClass());
         System.out.println(ctx.getBean("carFactory").getClass());
-
-
 
     }
 
