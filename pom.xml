@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  	<packaging>pom</packaging>
+
+	<!-- 整合SpringBoot 
+	<parent>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>1.5.2.RELEASE</version>
+	    <relativePath/>
+	</parent> -->
+    
+    <!-- Maven 坐标 -->
+	<groupId>cn.ucaner.spring</groupId>
+	<artifactId>Spring-Core</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- 项目名称 -->
+	<name>Spring-Core</name>
+	<url>http://spring.ucaner.cn</url>
+
+	<!-- 模块 -->
+	<modules>
+		<module>spring-learning-demo</module>
+  	</modules>
+
+	<!-- 全局属性配置-->
+	<properties>
+	     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	     <maven.compiler.source>1.8</maven.compiler.source>
+	     <maven.compiler.target>1.8</maven.compiler.target>
+	     <java.version>1.8</java.version>
+	</properties>
+    
+    
+    <dependencies>
+    
+    	<!-- junit -->	
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        
+	    <!-- lombok 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+        </dependency> -->
+        
+        <!-- guava  -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
