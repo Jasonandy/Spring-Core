@@ -25,6 +25,7 @@ public class AroundAdvice {
         return returnObj;
     }
 
+    
     @Pointcut("execution(* cn.ucaner.analyze.aop.bean.Chinese.eat(..))")
     public void chinese() {}
 

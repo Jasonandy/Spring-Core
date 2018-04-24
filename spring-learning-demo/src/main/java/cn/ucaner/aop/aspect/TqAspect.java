@@ -32,6 +32,7 @@ public class TqAspect {
 		System.out.println("不管方法是否成功完成都会执行我！！");
 	}
 
+	
 	// 声明rvt时指定的类型会限制目标方法必须返回指定类型的值
 	@AfterReturning(returning = "rvt", pointcut = "execution(* cn.ucaner.aop.service.impl.Hello.*(..))")
 	public void log(Object rvt) {
