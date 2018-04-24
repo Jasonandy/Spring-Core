@@ -23,7 +23,8 @@
 	<!-- 模块 -->
 	<modules>
 		<module>spring-learning-demo</module>
-  	</modules>
+		<module>spring-analyze</module>
+	</modules>
 
 	<!-- 全局属性配置-->
 	<properties>
