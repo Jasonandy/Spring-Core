@@ -43,10 +43,20 @@ public class MsgEvent extends ApplicationEvent{
 	private String content;
 	
 	
+	/**
+	* MsgEvent. 因为父类ApplicationEvent中没有默认的构造方法，所以子类必须重载构造函数
+	* @param source enventObject  protected transient Object  source
+	 */
 	public MsgEvent(Object source) {
 		super(source);
 	}
 
+	/**
+	* MsgEvent. 因为父类ApplicationEvent中没有默认的构造方法，所以子类必须重载构造函数
+	* @param source
+	* @param phoneNum
+	* @param content
+	 */
 	public MsgEvent(Object source, String phoneNum, String content) {
 		super(source);
 		this.phoneNum = phoneNum;

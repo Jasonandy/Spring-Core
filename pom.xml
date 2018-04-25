@@ -24,7 +24,8 @@
 	<modules>
 		<module>spring-learning-demo</module>
 		<module>spring-analyze</module>
-	</modules>
+    	<module>spring-tiny</module>
+  </modules>
 
 	<!-- 全局属性配置-->
 	<properties>

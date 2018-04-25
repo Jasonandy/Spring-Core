@@ -19,7 +19,14 @@ import cn.ucaner.aop.event.MsgEvent;
 /**     
  * @Package：cn.ucaner.aop.publisher   
  * @ClassName：MsgEventPublisher   
- * @Description：   <p> MsgEventPublisher事件发布类 - ApplicationContext 发布事件</p>
+ * @Description：   <p> MsgEventPublisher事件发布类 - ApplicationContext 发布事件  发布的时候会被触发 
+ * http://www.importnew.com/20890.html
+ * 
+ * 		[ApplicationEvent：容器事件，必须由ApplicationContext发布]
+ * 
+ * 	Spring的事件机制与所有时间机制都基本相似，它们都需要事件源、事件和事件监听器组成。
+ * 	只是此处的事件源是ApplicationContext，且事件必须由Java程序显式触发
+ * </p>
  * @Author： - Jason   
  * @CreatTime：2018年4月25日 下午4:58:37   
  * @Modify By：   
