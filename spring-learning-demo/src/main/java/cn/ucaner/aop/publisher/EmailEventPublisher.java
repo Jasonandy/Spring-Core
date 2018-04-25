@@ -1,7 +1,10 @@
-package cn.ucaner.aop.event;
+package cn.ucaner.aop.publisher;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
+import org.springframework.stereotype.Component;
+
+import cn.ucaner.aop.event.EmailEvent;
 
 /**
 * @Package：cn.ucaner.aop.event   
@@ -12,7 +15,8 @@ import org.springframework.context.ApplicationEventPublisherAware;
 * @Modify marker：   
 * @version    V1.0
  */
-public class EventPublisher implements ApplicationEventPublisherAware{
+@Component
+public class EmailEventPublisher implements ApplicationEventPublisherAware{
 	
     private ApplicationEventPublisher applicationEventPublisher;
 
@@ -22,8 +26,10 @@ public class EventPublisher implements ApplicationEventPublisherAware{
     }
 
     public  void sendMessge(){
+    	//发布时间
         EmailEvent emailEvent = new EmailEvent("ctx","地址","文本");
         applicationEventPublisher.publishEvent(emailEvent);
+        System.out.println("Has publish email!");
     }
 
 

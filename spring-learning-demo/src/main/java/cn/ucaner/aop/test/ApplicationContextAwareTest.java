@@ -1,4 +1,4 @@
-package cn.ucaner.aop.service;
+package cn.ucaner.aop.test;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

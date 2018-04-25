@@ -13,6 +13,7 @@ package cn.ucaner.aop.test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import cn.ucaner.aop.config.EventConfig;
+import cn.ucaner.aop.publisher.EmailEventPublisher;
 import cn.ucaner.aop.publisher.MsgEventPublisher;
 
 /**     
@@ -34,10 +35,13 @@ public class EventTest {
 		
         AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(EventConfig.class);
         
-        MsgEventPublisher msgEventPublisher=context.getBean(MsgEventPublisher.class);
+        MsgEventPublisher msgEventPublisher = context.getBean(MsgEventPublisher.class);
+        EmailEventPublisher emailEventPublisher = context.getBean(EmailEventPublisher.class);
         
         msgEventPublisher.pushlish("18688889999","Hello this Spring Event.");
         msgEventPublisher.pushlish("13766669999","I'm Spring Event.");
+        
+        emailEventPublisher.sendMessge();
         
         context.close();
     }
