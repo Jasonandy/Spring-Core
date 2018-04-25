@@ -21,7 +21,7 @@ import org.aspectj.lang.annotation.Before;
 @Aspect
 public class TqAspect {
 
-	// 匹配org.tq.app.service包下所有类所有方法的执行作为切入点
+	// 匹配 cn.ucaner.aop.service包下所有类所有方法的执行作为切入点
 	@Before("execution(* cn.ucaner.aop.service.impl.Hello.*(..))")
 	public void before() {
 		System.out.println("tqAspect brefore...");

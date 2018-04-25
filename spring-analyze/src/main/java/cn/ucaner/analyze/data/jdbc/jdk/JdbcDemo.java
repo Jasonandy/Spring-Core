@@ -6,11 +6,11 @@ public class JdbcDemo {
 
     // JDBC driver name and spring-jdbc.sql URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://10.4.243.47:3306/waimai_db?Unicode=true&characterEncoding=utf8&allowMultiQueries=true";
+    static final String DB_URL = "jdbc:mysql://47.106.125.14:3306/spingcore?Unicode=true&characterEncoding=utf8&allowMultiQueries=true";
 
     //  Database credentials
-    static final String USER = "q3boy";
-    static final String PASS = "alkf@xpdw";
+    static final String USER = "root";
+    static final String PASS = "123456";
 
 
     public static void main(String[] args) throws Exception{
