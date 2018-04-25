@@ -19,7 +19,7 @@ import cn.ucaner.aop.event.MsgEvent;
 /**     
  * @Package：cn.ucaner.aop.publisher   
  * @ClassName：MsgEventPublisher   
- * @Description：   <p> MsgEventPublisher 时间发布类</p>
+ * @Description：   <p> MsgEventPublisher事件发布类 - ApplicationContext 发布事件</p>
  * @Author： - Jason   
  * @CreatTime：2018年4月25日 下午4:58:37   
  * @Modify By：   
@@ -33,7 +33,6 @@ public class MsgEventPublisher {
 	@Autowired
     private ApplicationContext applicationContext;
     
-	
 	/**
 	 * @Description: pushlish 
 	 * @param phoneNum
@@ -41,6 +40,7 @@ public class MsgEventPublisher {
 	 * @Autor: Jason - jasonandy@hotmail.com
 	 */
     public void pushlish(String phoneNum, String content){
+    	//applicationContext event1 event2 etc...
         applicationContext.publishEvent(new MsgEvent(this, phoneNum, content));
     }
 }

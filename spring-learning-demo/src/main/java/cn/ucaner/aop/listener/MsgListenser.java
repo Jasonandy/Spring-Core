@@ -19,7 +19,10 @@ import cn.ucaner.aop.event.MsgEvent;
 /**     
  * @Package：cn.ucaner.aop.listener   
  * @ClassName：MsgListenser   
- * @Description：   <p> MsgListenser 定义事件监听类    </p>
+ * @Description：   <p> MsgListenser 定义事件监听类    
+ * 实现ApplicationListener接口，指定监听的事件类型
+ * onApplicationEvent对消息进行接受处理[时间触发的时候进行处理]
+ * </p>
  * @Author： - DaoDou   
  * @CreatTime：2018年4月25日 下午4:55:08   
  * @Modify By：   
