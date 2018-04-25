@@ -15,7 +15,16 @@ import org.springframework.context.ApplicationEvent;
 /**     
  * @Package：cn.ucaner.aop.event   
  * @ClassName：MsgEvent   
- * @Description：   <p> Spring事件</p>
+ * @Description：   <p> Spring事件
+ * bean 与 bean之间传递消息
+ * 一个bean处理完了希望其余一个接着处理.
+ * 这时我们就需要其余的一个bean监听当前bean所发送的事件.
+ * 
+ * 1.先自定义事件：你的事件需要继承 ApplicationEvent
+ * 2.定义事件监听器: 需要实现 ApplicationListener
+ * 3.使用容器对事件进行发布
+ * 
+ * </p>
  * @Author： - Jason   
  * @CreatTime：2018年4月25日 下午3:24:02   
  * @Modify By：   
