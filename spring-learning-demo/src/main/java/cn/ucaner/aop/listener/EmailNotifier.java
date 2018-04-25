@@ -14,10 +14,10 @@ import cn.ucaner.aop.event.EmailEvent;
 * @Modify marker：   
 * @version    V1.0
  */
-public class EmailNotifier implements ApplicationListener {
+public class EmailNotifier implements ApplicationListener<EmailEvent> {
 
 	@Override
-	public void onApplicationEvent(ApplicationEvent event) {
+	public void onApplicationEvent(EmailEvent event) {
 		if (event instanceof EmailEvent) {
 			EmailEvent email = (EmailEvent) event;
 			System.out.println("收件地址：" + email.getAddress());
