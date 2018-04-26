@@ -16,8 +16,6 @@ public abstract class AbstractBeanDefinition implements BeanDefinition {
     List<String> dependentBeanDefinitions=new ArrayList<>();
 
     /*
-     * (non-Javadoc)
-     * @see com.lonton.beans.config.BeanDefinition#setScope(java.lang.String)
      * @param bean的作用域
      */
     @Override

@@ -68,7 +68,7 @@ public class XmlParser {
                     String type = e.getAttributeValue("type");
                     // 注入基本类型属性
                     if (beanDepend == null && value != null) {
-                        // TODO 先验证是否为空或者等于空串
+                        //  先验证是否为空或者等于空串
                         if (Assert.isEffectiveString(proName) && Assert.isEffectiveString(type)) {
                             //思路：生成一个基本类型的bean，将其注入到bean容器(虽然可以实现，但是为每一个类的基本
                             //属性都需要生成一个bean，显然不合理)
@@ -81,7 +81,7 @@ public class XmlParser {
                     }
                     // 需要注入bean
                     if (beanDepend != null && value == null) {
-                        // 在这里我直接让生成的beandefinied持有depends就可以，正真的注入发生在createBean //TODO
+                        // 在这里我直接让生成的beandefinied持有depends就可以，正真的注入发生在createBean 
                         beanDefinition.addDepend(beanDepend);
                     }
                     if ((beanDepend == null && value == null) || (beanDepend != null && value != null)) {
