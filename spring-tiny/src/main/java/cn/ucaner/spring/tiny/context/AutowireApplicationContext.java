@@ -10,10 +10,15 @@ import cn.ucaner.spring.tiny.beans.factory.support.BeanDefinitionRegistry;
 import cn.ucaner.spring.tiny.core.io.AnnotationBeanDefinitionReader;
 import cn.ucaner.spring.tiny.core.io.Resource;
 
-/*
- * @author chenwentao
- * @since  2017-01-25
- * 给AutowireApplicationContext增加自动注入的功能
+/**
+* @Package：cn.ucaner.spring.tiny.context   
+* @ClassName：AutowireApplicationContext   
+* @Description：   <p> 给AutowireApplicationContext增加自动注入的功能</p>
+* @Author： - chenwentao   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public class AutowireApplicationContext extends DefaultListableBeanFactory implements AutowireCapableBeanFactory{
 

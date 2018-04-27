@@ -3,9 +3,15 @@ package cn.ucaner.spring.tiny.core.aop;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-/*
- * @author chenwentao
- * @since  2017-01-25
+/**
+* @Package：cn.ucaner.spring.tiny.core.aop   
+* @ClassName：AbstractAOPHandler   
+* @Description：   <p> AbstractAOPHandler </p>
+* @Author： - chenwentao   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public abstract class AbstractAOPHandler implements InvocationHandler{
 	

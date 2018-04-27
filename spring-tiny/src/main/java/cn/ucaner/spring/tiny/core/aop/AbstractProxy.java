@@ -1,5 +1,15 @@
 package cn.ucaner.spring.tiny.core.aop;
 
+/**
+* @Package：cn.ucaner.spring.tiny.core.aop   
+* @ClassName：AbstractProxy   
+* @Description：   <p> AbstractProxy</p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public abstract class AbstractProxy implements Proxy{
 	
     @SuppressWarnings("unchecked")

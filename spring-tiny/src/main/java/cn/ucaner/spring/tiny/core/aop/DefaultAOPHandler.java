@@ -2,6 +2,16 @@ package cn.ucaner.spring.tiny.core.aop;
 
 import java.lang.reflect.Method;
 
+/**
+* @Package：cn.ucaner.spring.tiny.core.aop   
+* @ClassName：DefaultAOPHandler   
+* @Description：   <p> DefaultAOPHandler</p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class DefaultAOPHandler extends AbstractAOPHandler{
 	
 	private Aop aop;

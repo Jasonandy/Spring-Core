@@ -1,8 +1,15 @@
 package cn.ucaner.spring.tiny.beans.config;
 
-/*
- * @author chenwentao
- * @since  2017-01-25
+/**
+* @Package：cn.ucaner.spring.tiny.beans.config   
+* @ClassName：DefaultBeanDefinition   
+* @Description：   <p> DefaultBeanDefinition </p>
+* @Author： - chenwentao    
+* @CreatTime：2018年4月27日 上午11:19:33   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public class DefaultBeanDefinition extends AbstractBeanDefinition {
 

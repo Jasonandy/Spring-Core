@@ -3,9 +3,15 @@ package cn.ucaner.spring.tiny.beans.config;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * @author cwt
- * @since  2017-01-25
+/**
+* @Package：cn.ucaner.spring.tiny.beans.config   
+* @ClassName：AbstractBeanDefinition   
+* @Description：   <p> AbstractBeanDefinition</p>
+* @Author： - cwt   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public abstract class AbstractBeanDefinition implements BeanDefinition {
 

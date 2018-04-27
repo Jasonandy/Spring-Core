@@ -2,6 +2,16 @@ package cn.ucaner.spring.tiny.core.aop;
 
 import java.lang.reflect.Proxy;
 
+/**
+* @Package：cn.ucaner.spring.tiny.core.aop   
+* @ClassName：DefaultProxyObject   
+* @Description：   <p> DefaultProxyObject </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class DefaultProxyObject extends AbstractProxy{
 
 	@Override

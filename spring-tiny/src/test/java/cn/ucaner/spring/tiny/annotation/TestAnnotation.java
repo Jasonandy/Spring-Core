@@ -12,22 +12,33 @@ import cn.ucaner.spring.tiny.bean.BeanA;
 import cn.ucaner.spring.tiny.beans.factory.DefaultListableBeanFactory;
 import cn.ucaner.spring.tiny.core.io.FileSystemResource;
 
+/**
+* @Package：cn.ucaner.spring.tiny.annotation   
+* @ClassName：TestAnnotation   
+* @Description：   <p> TestAnnotation</p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class TestAnnotation {
 	
 	private static Logger log;
+	
 	DefaultListableBeanFactory defaultListableBeanFactory;
 	
 	@Before
 	public void testDefaultListableBeanFactoryResource(){
-		log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
-		PropertyConfigurator.configure("log4j.properties");
+		//log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
+		//PropertyConfigurator.configure("log4j.properties");
 		//注入一个resource
 		FileSystemResource fsr = new FileSystemResource("resource/application.xml");
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);
 			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
-			log.debug(a.toString()+"");
+			//log.debug(a.toString()+"");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
@@ -42,7 +53,7 @@ public class TestAnnotation {
 		AutowiredHandle.AutowiredHandleMethod(AutowiredBean.class,defaultListableBeanFactory,
 				"autowiredbean");
 	    AutowiredBean ab=(AutowiredBean)a;
-		log.info(ab.say());
+		//log.info(ab.say());
 	}
 
 }
