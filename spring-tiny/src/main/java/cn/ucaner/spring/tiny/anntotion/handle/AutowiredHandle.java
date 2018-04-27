@@ -8,9 +8,15 @@ import org.slf4j.LoggerFactory;
 import cn.ucaner.spring.tiny.beans.factory.BeanFactory;
 import cn.ucaner.spring.tiny.ioc.annotation.Autowired;
 
-/*
- * @author chenwentao
- * @since  2017-01-25
+/**
+* @Package：cn.ucaner.spring.tiny.anntotion.handle   
+* @ClassName：AutowiredHandle   
+* @Description：   <p> AutowiredHandle </p>
+* @Author： - chenwentao   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public class AutowiredHandle {
     /*

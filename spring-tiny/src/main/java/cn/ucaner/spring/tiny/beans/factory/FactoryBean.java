@@ -1,7 +1,14 @@
 package cn.ucaner.spring.tiny.beans.factory;
 
-/*
- * @author  cwt
+/**
+* @Package：cn.ucaner.spring.tiny.beans.factory   
+* @ClassName：FactoryBean   
+* @Description：   <p>FactoryBean  </p>
+* @Author： - cwt   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public interface FactoryBean<T> {
 	

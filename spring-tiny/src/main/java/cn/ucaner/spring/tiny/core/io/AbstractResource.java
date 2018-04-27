@@ -5,6 +5,16 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+* @Package：cn.ucaner.spring.tiny.core.io   
+* @ClassName：AbstractResource   
+* @Description：   <p> AbstractResource </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public abstract class AbstractResource implements Resource{
 
 	@Override

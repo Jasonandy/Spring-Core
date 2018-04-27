@@ -11,6 +11,16 @@ import cn.ucaner.spring.tiny.beans.config.DefaultBeanDefinition;
 import cn.ucaner.spring.tiny.beans.factory.support.BeanDefinitionRegistry;
 import cn.ucaner.spring.tiny.beans.factory.support.XmlParser;
 
+/**
+* @Package：cn.ucaner.spring.tiny.core.io   
+* @ClassName：XmlBeanDefinitionReader   
+* @Description：   <p> XmlBeanDefinitionReader </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
     //暂时保存beanDefinition，稍后在doLoadBeanDefinitions方法中注册到beanFactory

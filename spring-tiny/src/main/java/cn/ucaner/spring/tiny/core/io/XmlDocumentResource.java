@@ -4,6 +4,16 @@ import java.io.File;
 import org.jdom.Document;
 import org.jdom.input.SAXBuilder;
 
+/**
+* @Package：cn.ucaner.spring.tiny.core.io   
+* @ClassName：XmlDocumentResource   
+* @Description：   <p> XmlDocumentResource </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class XmlDocumentResource extends DocumentResource{
 
 	public XmlDocumentResource(File file){

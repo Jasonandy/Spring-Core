@@ -1,7 +1,15 @@
 package cn.ucaner.spring.tiny.beans.factory.support;
 
-/*
- * @author  cwt
+/**
+* @Package：cn.ucaner.spring.tiny.beans.factory.support   
+* @ClassName：SingletonBeanRegistry   
+* @Description：   <p> SingletonBeanRegistry </p>
+* @Author： - cwt    
+* @CreatTime：2018年4月27日 下午6:11:18   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public interface SingletonBeanRegistry {
 

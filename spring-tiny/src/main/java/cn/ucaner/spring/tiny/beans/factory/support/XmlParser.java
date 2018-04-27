@@ -15,14 +15,20 @@ import cn.ucaner.spring.tiny.beans.config.DefaultBeanDefinition;
 import cn.ucaner.spring.tiny.exception.XmlConfigurationErrorException;
 import cn.ucaner.spring.tiny.tools.Assert;
 
-/*
- * @author chenwentao
- * @since  2017-01-25
+/**
+* @Package：cn.ucaner.spring.tiny.beans.factory.support   
+* @ClassName：XmlParser   
+* @Description：   <p> 
+* 解析xml方法:返回BeanDefinition對象集合
+* 改写XmlParser，解析xml返回的应该是beandefinition，而不是直接就生成了bean
+* 在获取了beandefinition之后，在通过beandefinition创建bean
+* </p>
+* @Author： - AbstractBeanFactory   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
-//解析xml方法:返回BeanDefinition對象集合
-//改写XmlParser，解析xml返回的应该是beandefinition，而不是直接就生成了bean
-//在获取了beandefinition之后，在通过beandefinition创建bean
-
 public class XmlParser {
 
     private static Map<String, BeanDefinition> beanDefinitions = new HashMap<>();

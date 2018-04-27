@@ -2,6 +2,16 @@ package cn.ucaner.spring.tiny.core.io;
 
 import cn.ucaner.spring.tiny.beans.factory.support.BeanDefinitionRegistry;
 
+/**
+* @Package：cn.ucaner.spring.tiny.core.io   
+* @ClassName：AbstractBeanDefinitionReader   
+* @Description：   <p> AbstractBeanDefinitionReader </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
+ */
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
 	
 	protected final BeanDefinitionRegistry registry;

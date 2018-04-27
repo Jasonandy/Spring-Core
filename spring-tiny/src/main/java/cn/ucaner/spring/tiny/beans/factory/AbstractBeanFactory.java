@@ -13,9 +13,15 @@ import cn.ucaner.spring.tiny.exception.BeansException;
 import cn.ucaner.spring.tiny.exception.CircularDependException;
 import cn.ucaner.spring.tiny.exception.NoSuchBeanDefinitionException;
 
-/*
- * @author chenwentao
- * @since  2017-01-25
+/**
+* @Package：cn.ucaner.spring.tiny.beans.factory   
+* @ClassName：AbstractBeanFactory   
+* @Description：   <p> AbstractBeanFactory </p>
+* @Author： - chenwentao   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
 

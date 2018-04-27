@@ -1,9 +1,14 @@
 package cn.ucaner.spring.tiny.beans.factory;
 
-/*
- * @author chenwentao
- * @since  2017-01-25
- * 带有自动注入功能的beanfactory
+/**
+* @Package：cn.ucaner.spring.tiny.beans.factory   
+* @ClassName：AutowireCapableBeanFactory   
+* @Description：   <p> 带有自动注入功能的beanfactory </p>
+* @Author： - chenwentao   
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public interface AutowireCapableBeanFactory extends BeanFactory{
 	

@@ -11,12 +11,19 @@ import cn.ucaner.spring.tiny.ioc.annotation.Autowired;
 import cn.ucaner.spring.tiny.ioc.annotation.Component;
 import cn.ucaner.spring.tiny.tools.Assert;
 import cn.ucaner.spring.tiny.tools.PackageUtil;
-/*
- * @author cwt
- * @since  2017-02-03
- * @description  直接继承XmlBeanDefinitionReader类实现，不仅能读取xml配置，
- * 还能自动将注解类注入IOC容器
- * 它从注解中获取beanDefinition
+
+/**
+* @Package：cn.ucaner.spring.tiny.core.io   
+* @ClassName：AnnotationBeanDefinitionReader   
+* @Description：   <p> 直接继承XmlBeanDefinitionReader类实现，不仅能读取xml配置，
+* 还能自动将注解类注入IOC容器
+* 它从注解中获取beanDefinition
+* </p>
+* @Author： - cwt    
+* @Modify By：   
+* @ModifyTime：  2018年4月27日
+* @Modify marker：   
+* @version    V1.0
  */
 public class AnnotationBeanDefinitionReader extends XmlBeanDefinitionReader {
 
