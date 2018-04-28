@@ -14,14 +14,29 @@ import java.util.Collection;
  */
 public class Assert {
 
-    public static boolean isNotEmpry(Collection<?> c) {
+	/**
+	 * @Description: isNotEmpty 
+	 * @param c
+	 * @return boolean
+	 */
+    public static boolean isNotEmpty(Collection<?> c) {
         return c != null && c.size() > 0;
     }
 
+    /**
+     * @Description: isNull 
+     * @param object
+     * @return String
+     */
     public static String isNull(Object object) {
         return "Object  is  null?" + (object == null ? true : false);
     }
 
+    /**
+     * @Description: isEffectiveString
+     * @param value
+     * @return boolean
+     */
     public static boolean isEffectiveString(String value) {
         return value != null && !value.equals("");
     }

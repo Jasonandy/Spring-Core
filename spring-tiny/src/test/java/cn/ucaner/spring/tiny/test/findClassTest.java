@@ -1,6 +1,16 @@
 package cn.ucaner.spring.tiny.test;
 
-public class A {
+/**
+* @Package：cn.ucaner.spring.tiny.test   
+* @ClassName：findClassTest   
+* @Description：   <p> findClassTest </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月28日
+* @Modify marker：   
+* @version    V1.0
+ */
+public class findClassTest {
 
     public static void main(String[] args) {
 

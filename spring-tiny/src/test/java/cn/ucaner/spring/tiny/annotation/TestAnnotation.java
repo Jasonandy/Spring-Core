@@ -1,10 +1,8 @@
 package cn.ucaner.spring.tiny.annotation;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import cn.ucaner.spring.tiny.anntotion.handle.AutowiredHandle;
 import cn.ucaner.spring.tiny.bean.AutowiredBean;

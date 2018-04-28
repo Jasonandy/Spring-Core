@@ -1,5 +1,15 @@
 package cn.ucaner.spring.tiny.classForTest;
 
+/**
+* @Package：cn.ucaner.spring.tiny.classForTest   
+* @ClassName：Food   
+* @Description：   <p> Food </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月28日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Food {
 
     private String foodName;

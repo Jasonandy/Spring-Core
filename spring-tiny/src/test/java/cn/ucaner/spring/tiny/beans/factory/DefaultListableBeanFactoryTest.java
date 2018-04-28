@@ -12,6 +12,16 @@ import cn.ucaner.spring.tiny.classForTest.People;
 import cn.ucaner.spring.tiny.core.io.FileSystemResource;
 import cn.ucaner.spring.tiny.exception.BeansException;
 
+/**
+* @Package：cn.ucaner.spring.tiny.beans.factory   
+* @ClassName：DefaultListableBeanFactoryTest   
+* @Description：   <p> DefaultListableBeanFactoryTest </p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月28日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class DefaultListableBeanFactoryTest {
 
     private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);

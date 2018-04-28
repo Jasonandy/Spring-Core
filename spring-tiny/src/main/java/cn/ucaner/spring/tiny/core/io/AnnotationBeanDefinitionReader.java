@@ -48,11 +48,11 @@ public class AnnotationBeanDefinitionReader extends XmlBeanDefinitionReader {
         // 获得包名，将包下的类进行解析
         List<String> PackageNames = XmlParser.getComponentPackageNames();
         // 读取
-        if (Assert.isNotEmpry(PackageNames)) {
+        if (Assert.isNotEmpty(PackageNames)) {
             for (String PackageName : PackageNames) {
                 // 获得包下的所有类名
                 List<String> ClassNames = PackageUtil.getClassName(PackageName);
-                if (Assert.isNotEmpry(ClassNames)) {
+                if (Assert.isNotEmpty(ClassNames)) {
                     for (String ClassName : ClassNames) {
                         BeanDefinition beanDefinition = new DefaultBeanDefinition();
                         // 获得beanDefinition的beanClass

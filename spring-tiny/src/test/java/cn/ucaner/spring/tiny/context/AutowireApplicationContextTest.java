@@ -12,6 +12,16 @@ import cn.ucaner.spring.tiny.beans.factory.DefaultListableBeanFactory;
 import cn.ucaner.spring.tiny.core.io.FileSystemResource;
 import cn.ucaner.spring.tiny.tools.Assert;
 
+/**
+* @Package：cn.ucaner.spring.tiny.context   
+* @ClassName：AutowireApplicationContextTest   
+* @Description：   <p> AutowireApplicationContextTest</p>
+* @Author： -    
+* @Modify By：   
+* @ModifyTime：  2018年4月28日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class AutowireApplicationContextTest {
 
     private static Logger log = LoggerFactory.getLogger(AutowireApplicationContextTest.class);

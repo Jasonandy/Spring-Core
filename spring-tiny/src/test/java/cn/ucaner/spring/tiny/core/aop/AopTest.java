@@ -11,9 +11,18 @@ import cn.ucaner.spring.tiny.bean.BeanA;
 import cn.ucaner.spring.tiny.bean.jiekou;
 import cn.ucaner.spring.tiny.beans.factory.DefaultListableBeanFactory;
 import cn.ucaner.spring.tiny.core.io.FileSystemResource;
-/*
- * @author cwt
- * java实现动态代理必须实现相同的接口，后期实现不需要实现相同的接口
+
+/**
+* @Package：cn.ucaner.spring.tiny.core.aop   
+* @ClassName：AopTest   
+* @Description：   <p> AopTest
+* java实现动态代理必须实现相同的接口，后期实现不需要实现相同的接口
+* </p>
+* @Author： - cwt   
+* @Modify By：   
+* @ModifyTime：  2018年4月28日
+* @Modify marker：   
+* @version    V1.0
  */
 public class AopTest {
 	
@@ -22,9 +31,9 @@ public class AopTest {
 	
 	@Test
 	public void testDefaultListableBeanFactoryResource(){
-		PropertyConfigurator.configure("log4j.properties");
+		PropertyConfigurator.configure("classpath:*/log4j.properties");
 		//注入一个resource
-		FileSystemResource fsr=new FileSystemResource("src\\resource\\test.xml");
+		FileSystemResource fsr=new FileSystemResource("resource\\test.xml");
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);

@@ -1,6 +1,5 @@
 package cn.ucaner.spring.tiny.exception;
 
-
 /**
 * @Package：cn.ucaner.spring.tiny.exception   
 * @ClassName：ConfigurationErrorException   
