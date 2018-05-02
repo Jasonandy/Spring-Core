@@ -4,7 +4,9 @@ package cn.ucaner.spring.tiny.exception;
 /**
 * @Package：cn.ucaner.spring.tiny.exception   
 * @ClassName：XmlConfigurationErrorException   
-* @Description：   <p> XmlConfigurationErrorException </p>
+* @Description：   <p> XmlConfigurationErrorException 
+* xml配置异常
+* </p>
 * @Author： -    
 * @Modify By：   
 * @ModifyTime：  2018年4月27日

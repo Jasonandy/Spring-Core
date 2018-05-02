@@ -3,7 +3,13 @@ package cn.ucaner.spring.tiny.enums;
 /**
 * @Package：cn.ucaner.spring.tiny.enums   
 * @ClassName：ConfigurableBeanFactory   
-* @Description：   <p> ConfigurableBeanFactory 默认为单例</p>
+* @Description：   <p> ConfigurableBeanFactory 默认为单例
+* bean工厂枚举
+* 单例
+* 多例
+*
+* 默认为单例模式.
+* </p>
 * @Modify By：   
 * @Modify marker：   
 * @version    V1.0

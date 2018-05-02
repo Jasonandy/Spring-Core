@@ -3,7 +3,10 @@ package cn.ucaner.spring.tiny.core.aop;
 /**
 * @Package：cn.ucaner.spring.tiny.core.aop   
 * @ClassName：AbstractProxy   
-* @Description：   <p> AbstractProxy</p>
+* @Description：   <p> AbstractProxy
+* 
+* - 抽象代理 - 
+* </p>
 * @Author： -    
 * @Modify By：   
 * @ModifyTime：  2018年4月27日

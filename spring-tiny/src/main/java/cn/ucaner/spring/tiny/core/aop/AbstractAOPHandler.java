@@ -6,7 +6,10 @@ import java.lang.reflect.Method;
 /**
 * @Package：cn.ucaner.spring.tiny.core.aop   
 * @ClassName：AbstractAOPHandler   
-* @Description：   <p> AbstractAOPHandler </p>
+* @Description：   <p> AbstractAOPHandler 
+* 
+* - aop 切面处理
+* </p>
 * @Author： - chenwentao   
 * @Modify By：   
 * @ModifyTime：  2018年4月27日

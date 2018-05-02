@@ -5,7 +5,10 @@ import java.lang.reflect.Proxy;
 /**
 * @Package：cn.ucaner.spring.tiny.core.aop   
 * @ClassName：DefaultProxyObject   
-* @Description：   <p> DefaultProxyObject </p>
+* @Description：   <p> DefaultProxyObject 
+* 
+* - 默认的代理对象 
+* </p>
 * @Author： -    
 * @Modify By：   
 * @ModifyTime：  2018年4月27日

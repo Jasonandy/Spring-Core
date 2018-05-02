@@ -3,7 +3,10 @@ package cn.ucaner.spring.tiny.enums;
 /**
 * @Package：cn.ucaner.spring.tiny.enums   
 * @ClassName：ResourceUtils   
-* @Description：   <p> ResourceUtils </p>
+* @Description：   <p> ResourceUtils 
+* 
+* 资源工具类  - 加载资源
+* </p>
 * @Modify By：   
 * @Modify marker：   
 * @version    V1.0

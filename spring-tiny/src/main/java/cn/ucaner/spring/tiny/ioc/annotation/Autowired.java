@@ -8,7 +8,11 @@ import java.lang.annotation.Target;
 /**
 * @Package：cn.ucaner.spring.tiny.ioc.annotation   
 * @ClassName：Autowired   
-* @Description：   <p> Autowired </p>
+* @Description：   <p> Autowired
+* 
+* - 注解自动注入
+*  
+*  </p>
 * @Author： -    
 * @CreatTime：2018年4月27日 上午10:51:08   
 * @Modify By：   

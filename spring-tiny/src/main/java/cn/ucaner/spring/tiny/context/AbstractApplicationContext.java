@@ -6,7 +6,11 @@ import cn.ucaner.spring.tiny.core.io.DefaultResourceLoader;
 /**
 * @Package：cn.ucaner.spring.tiny.context   
 * @ClassName：AbstractApplicationContext   
-* @Description：   <p> AbstractApplicationContext</p>
+* @Description：   <p> AbstractApplicationContext
+* 
+* - 抽象应用上下文容器
+* 
+* </p>
 * @Author： -    
 * @Modify By：   
 * @ModifyTime：  2018年4月27日

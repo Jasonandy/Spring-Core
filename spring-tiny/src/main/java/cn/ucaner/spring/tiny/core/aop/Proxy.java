@@ -3,7 +3,10 @@ package cn.ucaner.spring.tiny.core.aop;
 /**
 * @Package：cn.ucaner.spring.tiny.core.aop   
 * @ClassName：Proxy   
-* @Description：   <p> Proxy </p>
+* @Description：   <p> Proxy
+* 
+*  - 代理接口
+*  </p>
 * @Author： -    
 * @CreatTime：2018年4月27日 上午11:02:37   
 * @Modify By：   

@@ -3,7 +3,10 @@ package cn.ucaner.spring.tiny.context;
 /**
 * @Package：cn.ucaner.spring.tiny.context   
 * @ClassName：ApplicationContext   
-* @Description：   <p> ApplicationContext</p>
+* @Description：   <p> ApplicationContext
+* 
+*  - 应用上下文
+* </p>
 * @Author： -    
 * @Modify By：   
 * @ModifyTime：  2018年4月27日

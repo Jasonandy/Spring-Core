@@ -3,7 +3,10 @@ package cn.ucaner.spring.tiny.exception;
 /**
 * @Package：cn.ucaner.spring.tiny.exception   
 * @ClassName：NoSuchBeanDefinitionException   
-* @Description：   <p> NoSuchBeanDefinitionException</p>
+* @Description：   <p> NoSuchBeanDefinitionException 
+* 
+* - 没有这个bean的定义 - 
+* </p>
 * @Author： -    
 * @Modify By：   
 * @ModifyTime：  2018年4月27日

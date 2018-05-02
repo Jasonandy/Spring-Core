@@ -3,7 +3,10 @@ package cn.ucaner.spring.tiny.exception;
 /**
 * @Package：cn.ucaner.spring.tiny.exception   
 * @ClassName：BeansException   
-* @Description：   <p> BeansException </p>
+* @Description：   <p> BeansException 
+* 
+* bean - 异常
+* </p>
 * @Author： -    
 * @Modify By：   
 * @ModifyTime：  2018年4月27日
