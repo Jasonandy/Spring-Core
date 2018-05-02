@@ -16,7 +16,12 @@
 
     <bean id="simpleMethodInterceptor" class="cn.ucaner.maxwell.aop.SimpleMethodInterceptor" />
 
+	<!-- 测试嵌套事物  -->
+	<bean id = "nestedBean" class="cn.ucaner.maxwell.base.transaction.NestedBean" />
+
     <bean class="cn.ucaner.maxwell.aop.SimpleAopBean" />
+    
+    <bean id="transactionBean" class="cn.ucaner.maxwell.base.transaction.TransactionBean" />
 
     <aop:config expose-proxy="true">
         <aop:advisor advice-ref="simpleMethodInterceptor" pointcut="execution(* cn.ucaner.maxwell.aop.SimpleAopBean.*(..))" />

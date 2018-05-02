@@ -17,9 +17,11 @@ import cn.ucaner.maxwell.base.Student;
 
 public class JavaTest {
 
-    private class MyList extends ArrayList {
+    private class MyList extends ArrayList<Object> {
 
-        @Override
+		private static final long serialVersionUID = -1354914750258632312L;
+
+		@Override
         public String get(int index) {
             return "";
         }

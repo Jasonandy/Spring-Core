@@ -23,3 +23,6 @@ public class Local {
 	}
 	
 }
+//Outputs 
+//US: How are you! 
+//CN: 您好！ 
