@@ -8,8 +8,15 @@ import org.junit.Test;
 import java.util.concurrent.ExecutionException;
 
 /**
- * Guava demo.
- *
+* @Package：cn.ucaner.maxwell.cache   
+* @ClassName：CacheDemo   
+* @Description：   <p> CacheDemo </p>
+* @Author： - Jason   
+* @CreatTime：2018年5月2日 下午5:54:52   
+* @Modify By：   
+* @ModifyTime：  2018年5月2日
+* @Modify marker：   
+* @version    V1.0
  */
 public class CacheDemo {
 
@@ -30,3 +37,6 @@ public class CacheDemo {
     }
 
 }
+//Outputs
+//Hello: China
+//US

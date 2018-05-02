@@ -10,7 +10,6 @@ import cn.ucaner.maxwell.base.Student;
 
 /**
  * {@link base.Student}配置
- *
  */
 @Configuration
 public class StudentConfig implements ImportAware {

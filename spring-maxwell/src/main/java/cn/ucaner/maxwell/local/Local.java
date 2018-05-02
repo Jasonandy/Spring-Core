@@ -7,9 +7,6 @@ import org.junit.Test;
 
 /**
  * 测试java本地化相关
- * 
- * @author skywalker
- *
  */
 public class Local {
 
