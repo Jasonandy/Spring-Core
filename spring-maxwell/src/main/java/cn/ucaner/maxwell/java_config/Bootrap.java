@@ -15,6 +15,10 @@ public class Bootrap {
         SimpleBean simpleBean = context.getBean(SimpleBean.class);
         System.out.println(simpleBean.getStudent().getName());
         System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
+        context.close();
     }
 
 }
+//Outputs 
+//importaware
+//Jason

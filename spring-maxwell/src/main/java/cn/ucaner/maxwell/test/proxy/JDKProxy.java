@@ -16,3 +16,8 @@ public class JDKProxy {
     }
 
 }
+//outputs 
+
+//Method printName is proxyed.
+//Name is xxxx
+//Age: 18
