@@ -25,9 +25,10 @@
 		<module>spring-learning-demo</module>
 		<module>spring-analyze</module>
     	<module>spring-tiny</module>
+    	<module>spring-maxwell</module>
   </modules>
 
-	<!-- 全局属性配置-->
+	<!-- 全局属�?配置-->
 	<properties>
 	     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
