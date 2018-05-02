@@ -12,6 +12,19 @@ package cn.ucaner.spring.tiny.beans.factory;
  */
 public interface AutowireCapableBeanFactory extends BeanFactory{
 	
+	int AUTOWIRE_NO = 0;//不使用自动装配 
+	
+    int AUTOWIRE_BY_NAME = 1;//通过名称自动装配 
+    
+    int AUTOWIRE_BY_TYPE = 2;//通过类型自动装配  
+    
+    int AUTOWIRE_CONSTRUCTOR = 3;//构造器装配 
+    
+    @Deprecated
+    int AUTOWIRE_AUTODETECT = 4;//已过时  
+    
+    
+	    
 	//拥有自动注入bean的功能，检查Map集合，如果有@Autowire注解，进行自动注入
 	 void AutowireBean();
 }
