@@ -5,9 +5,16 @@ import org.springframework.validation.Validator;
 
 import cn.ucaner.maxwell.model.SimpleModel;
 
-
 /**
- * 自定义Spring校验器.
+* @Package：cn.ucaner.maxwell.validator   
+* @ClassName：SimpleModelValidator   
+* @Description：   <p> 自定义Spring校验器. </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:46:54   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 public class SimpleModelValidator implements Validator {
 

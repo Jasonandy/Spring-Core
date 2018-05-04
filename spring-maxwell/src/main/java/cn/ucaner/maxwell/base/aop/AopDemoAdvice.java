@@ -4,6 +4,15 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 /**
+* @Package：cn.ucaner.maxwell.base.aop   
+* @ClassName：AopDemoAdvice   
+* @Description：   <p> AopDemoAdvice </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:41:26   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 public class AopDemoAdvice implements MethodInterceptor {
 

@@ -7,6 +7,15 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import cn.ucaner.maxwell.base.SimpleBean;
 
 /**
+* @Package：cn.ucaner.maxwell.java_config   
+* @ClassName：Bootrap   
+* @Description：   <p> Bootrap </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:44:33   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 public class Bootrap {
 

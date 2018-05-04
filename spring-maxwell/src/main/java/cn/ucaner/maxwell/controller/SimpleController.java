@@ -22,8 +22,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import cn.ucaner.maxwell.model.SimpleModel;
 
 /**
- * 简单的Spring {@link org.springframework.stereotype.Controller}.
- *
+* @Package：cn.ucaner.maxwell.controller   
+* @ClassName：SimpleController   
+* @Description：   <p> 简单的Spring {@link org.springframework.stereotype.Controller} </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:44:16   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 @Controller
 public class SimpleController {

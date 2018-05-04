@@ -4,8 +4,15 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * {@link java.lang.reflect.InvocationHandler}实现.
- *
+* @Package：cn.ucaner.maxwell.test.proxy   
+* @ClassName：Handler   
+* @Description：   <p> {@link java.lang.reflect.InvocationHandler}实现. </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:45:58   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 public class Handler implements InvocationHandler {
 

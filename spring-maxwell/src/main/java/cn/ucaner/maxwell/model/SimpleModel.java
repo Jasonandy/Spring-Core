@@ -6,7 +6,15 @@ import javax.validation.constraints.Max;
 import java.util.Date;
 
 /**
- * 简单的model.
+* @Package：cn.ucaner.maxwell.model   
+* @ClassName：SimpleModel   
+* @Description：   <p> 简单的model. </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:45:26   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 public class SimpleModel {
 

@@ -6,8 +6,18 @@ import org.springframework.beans.factory.config.Scope;
 import cn.ucaner.maxwell.base.Student;
 
 /**
- * {@link org.springframework.beans.factory.config.Scope}简单实现，每调用一次变返回一个
- * 新的对象.
+* @Package：cn.ucaner.maxwell.base.scope   
+* @ClassName：OneScope   
+* @Description：   <p> OneScope
+* {@link org.springframework.beans.factory.config.Scope}
+* 简单实现，每调用一次变返回一个新的对象
+* </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:41:47   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 public class OneScope implements Scope {
 

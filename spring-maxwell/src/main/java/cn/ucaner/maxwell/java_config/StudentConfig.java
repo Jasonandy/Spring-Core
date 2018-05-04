@@ -9,7 +9,15 @@ import org.springframework.core.type.AnnotationMetadata;
 import cn.ucaner.maxwell.base.Student;
 
 /**
- * {@link base.Student}配置
+* @Package：cn.ucaner.maxwell.java_config   
+* @ClassName：StudentConfig   
+* @Description：   <p> {@link base.Student}配置 </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:44:53   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 @Configuration
 public class StudentConfig implements ImportAware {

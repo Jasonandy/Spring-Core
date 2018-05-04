@@ -6,7 +6,15 @@ import java.util.ResourceBundle;
 import org.junit.Test;
 
 /**
- * 测试java本地化相关
+* @Package：cn.ucaner.maxwell.local   
+* @ClassName：Local   
+* @Description：   <p> java本地化相关 </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:45:10   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
  */
 public class Local {
 

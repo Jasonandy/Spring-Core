@@ -15,6 +15,17 @@ import org.junit.Test;
 
 import cn.ucaner.maxwell.base.Student;
 
+/**
+* @Package：cn.ucaner.maxwell.test   
+* @ClassName：JavaTest   
+* @Description：   <p> JavaTest </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:46:43   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class JavaTest {
 
     private class MyList extends ArrayList<Object> {

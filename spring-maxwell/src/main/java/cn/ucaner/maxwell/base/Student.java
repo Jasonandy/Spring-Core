@@ -1,5 +1,16 @@
 package cn.ucaner.maxwell.base;
 
+/**
+* @Package：cn.ucaner.maxwell.base   
+* @ClassName：Student   
+* @Description：   <p> Student </p>
+* @Author： - Jason    
+* @CreatTime：2018年5月4日 上午10:43:54   
+* @Modify By：   
+* @ModifyTime：  2018年5月4日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Student extends BaseStudent {
 
 	private String name;
