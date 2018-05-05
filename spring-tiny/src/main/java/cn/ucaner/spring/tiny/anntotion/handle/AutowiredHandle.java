@@ -11,7 +11,11 @@ import cn.ucaner.spring.tiny.ioc.annotation.Autowired;
 /**
 * @Package：cn.ucaner.spring.tiny.anntotion.handle   
 * @ClassName：AutowiredHandle   
-* @Description：   <p> AutowiredHandle </p>
+* @Description：   <p> AutowiredHandle 
+* 
+* 注解处理器 
+* 
+* </p>
 * @Author： - chenwentao   
 * @Modify By：   
 * @ModifyTime：  2018年4月27日
@@ -19,32 +23,45 @@ import cn.ucaner.spring.tiny.ioc.annotation.Autowired;
 * @version    V1.0
  */
 public class AutowiredHandle {
-    /*
-     * @param AutowiredClasss:注解的类类型
-     * @BeanName 带有@Autowired注解的类的名字
-     */
+	
+	
+	
+	/**
+	 * logger 获取日志记录器
+	 */
     private static Logger logger = LoggerFactory.getLogger(AutowiredHandle.class);
 
-    public static void AutowiredHandleMethod(Class<?> AutowiredClass, BeanFactory beanFactory, String beanName)
-            throws Exception {
-        // 遍历AutowiredClass的方法
+    /**
+     * @Description: 对有注解了的类进行相关的处理
+     * @param AutowiredClass 注解的类类型
+     * @param beanFactory
+     * @param beanName   带有@Autowired注解的类的名字
+     * @throws Exception void
+     * @Autor: Jason  - jasonandy@hotmail.com
+     */
+    public static void AutowiredHandleMethod(Class<?> AutowiredClass, BeanFactory beanFactory, String beanName) throws Exception {
+       
+    	//遍历AutowiredClass的方法 - 能拿到所有（不包括继承的方法）
         for (Method m : AutowiredClass.getDeclaredMethods()) {
             Autowired t = m.getAnnotation(Autowired.class);
             if (t != null) {
-                // 有的话我们就将bean进行注入
                 String proName = t.value();
-                // 获取注入bean
                 Object bean = beanFactory.getBean(t.value());
-                System.out.println(t.value() + bean);
-                String methodName = "set" + proName.substring(0, 1).toUpperCase() + proName.substring(1);
-                // System.out.println("methodName:" + methodName);
-                Class<?> cl = beanFactory.getBean(beanName).getClass();
+                
+                logger.debug("objectBean - {}",t.value() + bean);
+                
+                String methodName = "set" + proName.substring(0, 1).toUpperCase() + proName.substring(1);//setMethods()
+               
+                logger.debug("methodName - {}",methodName);
+                
+                Class<?> clz = beanFactory.getBean(beanName).getClass();
                 // 通过反射获取方法
-                Method method = cl.getMethod(methodName, bean.getClass());
+                Method method = clz.getMethod(methodName, bean.getClass());
+                
                 if (method != null) {
                     method.invoke(beanFactory.getBean(beanName), bean);
                 } else {
-                    logger.error("调用的方法不存在！");
+                    logger.error("Call Method doesn't exist by Jason !  claz-name: {}",beanName);
                 }
             }
         }

@@ -69,9 +69,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
     }
 
     /*
-     * (non-Javadoc)
-     * @see com.lonton.beans.factory.support.BeanDefinitionRegistry#registerBeanDefinition(java.lang.String,
-     * com.lonton.beans.config.BeanDefinition) 在这里我们已经获取到了beanName and beanDefinition，只需将其注入到Map集合中就行了
+     * 在这里我们已经获取到了beanName and beanDefinition，只需将其注入到Map集合中就行了
      */
     @Override
     public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) {
@@ -176,8 +174,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
             Method method = bean.getClass().getMethod(methodName, parameterTypes);
             method.invoke(bean, args);
         } catch (Exception e) {
-            log.error("基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配\n"+
-        "方法名："+methodName+"参数："+args);
+            log.error("基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配\n"+"方法名："+methodName+"参数："+args);
         }
         return null;
     }
@@ -189,7 +186,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
         String name = values[0];
         String type = values[1];
         String value = values[2];
-        // 我先需要先创建一个基本类型的对象 TODO
+        // 我先需要先创建一个基本类型的对象 
         String methodName = "set" + name.substring(0, 1).toUpperCase() + name.substring(1);
         try {
             Class<?> typeClss = Class.forName(type);

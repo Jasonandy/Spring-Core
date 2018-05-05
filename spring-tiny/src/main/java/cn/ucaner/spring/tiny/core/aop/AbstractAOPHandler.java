@@ -19,6 +19,7 @@ import java.lang.reflect.Method;
 public abstract class AbstractAOPHandler implements InvocationHandler{
 	
 	protected Object object;
+	
 	public AbstractAOPHandler(Object object){
 		this.object=object;
 	}

@@ -23,6 +23,10 @@ import cn.ucaner.spring.tiny.core.io.Resource;
 public class AutowireApplicationContext extends DefaultListableBeanFactory implements AutowireCapableBeanFactory{
 
 	private static Logger log = LoggerFactory.getLogger(AutowireApplicationContext.class);
+	
+	/**
+	 * 加载log4j的配置
+	 */
 	static{
 		PropertyConfigurator.configure("log4j.properties");
 	}
@@ -48,12 +52,15 @@ public class AutowireApplicationContext extends DefaultListableBeanFactory imple
 			super(registry);
 		}
 	}
+	
+	
 	@Override
 	protected void refresh() throws Exception {
 		int count=new AutowireAnnotationBeanDefinition(this).loadBeanDefinitions(resource);
 		log.info("一共初注册了:"+count+"个beanDefinition");
 	}
 
+	
     @Override
     public void AutowireBean() {
         
