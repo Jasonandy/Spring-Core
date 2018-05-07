@@ -17,23 +17,21 @@ import java.io.File;
  */
 public class DocumentResource extends FileSystemResource{
 	
-	public DocumentResource(File file)
-	{
+	public DocumentResource(File file){
 		super(file);
 		
 	}
-	public DocumentResource(String path)
-	{
+	
+	
+	public DocumentResource(String path){
 		super(path);
 		
 	}
-	/* (non-Javadoc)
-	 * @see com.lonton.core.io.FileSystemResource#getDescription()
-	 */
+	
+	
 	@Override
 	public String getDescription() {
-		//重寫下getDescription()方法
-		return "這是一個穩健Resource："+super.getDescription();
+		return "This is a Resource : "+super.getDescription();
 	}
 	
 	

@@ -15,6 +15,12 @@ import java.io.InputStream;
  */
 public interface InputStreamSource {
 	
+	/**
+	 * @Description: 获取输入流
+	 * @return
+	 * @throws IOException InputStream
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	InputStream getInputStream() throws IOException;
 
 }

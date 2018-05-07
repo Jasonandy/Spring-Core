@@ -15,11 +15,26 @@ import java.io.IOException;
  */
 public interface Resource extends InputStreamSource{
 	
+	/**
+	 * @Description: 文件是否存在
+	 * @return boolean
+	 * @Autor: Jason - Jasonandy·hotmail.com
+	 */
 	boolean exists();
 	
+	/**
+	 * @Description: 获取文件对象
+	 * @return   - java.io.File;
+	 * @throws IOException File
+	 * @Autor: Jason - Jasonandy·hotmail.com
+	 */
 	File getFile() throws IOException;
 	
-	//return a  description for the  resource
+	/**
+	 * @Description: 获取文件的描述
+	 * @return String
+	 * @Autor: Jason - Jasonandy·hotmail.com
+	 */
 	String getDescription();
 	
 }

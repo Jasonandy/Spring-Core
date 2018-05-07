@@ -24,26 +24,41 @@ import java.io.InputStream;
  */
 public class FileSystemResource extends AbstractResource {
 
+	/**
+	 * File 
+	 */
 	private final File file;
 
+	/**
+	 * File Path
+	 */
 	private final String path;
 	
+	/**
+	* FileSystemResource. 
+	* @param file  文件对象
+	 */
 	public FileSystemResource(File file){
 		this.file = file;
 		this.path = file.getAbsolutePath();
 	}
 	
+	/**
+	* FileSystemResource. 
+	* @param path  文件路径 
+	 */
 	public FileSystemResource(String path){
 		this.path = path;
 		this.file = new File(path);
 	}
-	/*
-	 * 实现接口Resource中的getDescription()方法，(资源的描述)
+
+	
+	/**
+	 * 实现接口Resource中的getDescription()方法(资源的描述)
 	 */
 	@Override
 	public String getDescription(){
-		return "资源的描述："+file.getName()+
-				"  "+"地址为："+path;
+		return "[Spring - Tiny]Resoure  description Name is : "+file.getName()+"  "+"The File Path is : "+path;
 	}
 
 	@Override

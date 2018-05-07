@@ -41,6 +41,7 @@ public abstract class AbstractResource implements Resource{
 		throw new FileNotFoundException(getDescription() + " cannot be resolved to absolute file path");
 	}
 
+	
 	@Override
 	public String toString() {
 		return getDescription();
