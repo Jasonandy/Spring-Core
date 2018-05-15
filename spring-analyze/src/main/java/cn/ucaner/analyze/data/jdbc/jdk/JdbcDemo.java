@@ -34,10 +34,10 @@ public class JdbcDemo {
 
 
         String sql = "INSERT INTO jdbc_user " +"(user_name,sex,age,email,phone,version,last_modify_time,create_time)"+
-                "VALUES ('test001',null,null,null,null,null,null,null)";
+                "VALUES ('Jason',null,null,null,null,null,null,null)";
         stmt1.executeUpdate(sql);
         sql = "INSERT INTO jdbc_user " +"(user_name,sex,age,email,phone,version,last_modify_time,create_time)"+
-                "VALUES ('test002',null,null,null,null,null,null,null)";
+                "VALUES ('Andy',null,null,null,null,null,null,null)";
         stmt2.executeUpdate(sql);
 
 

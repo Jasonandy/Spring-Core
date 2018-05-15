@@ -3,6 +3,7 @@ package cn.ucaner.spring.tiny.annotation;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import cn.ucaner.spring.tiny.anntotion.handle.AutowiredHandle;
 import cn.ucaner.spring.tiny.bean.AutowiredBean;
@@ -22,7 +23,7 @@ import cn.ucaner.spring.tiny.core.io.FileSystemResource;
  */
 public class TestAnnotation {
 	
-	private static Logger log;
+	private static Logger logger =  LoggerFactory.getLogger(TestAnnotation.class);;
 	
 	DefaultListableBeanFactory defaultListableBeanFactory;
 	
@@ -33,9 +34,9 @@ public class TestAnnotation {
 		//注入一个resource
 		FileSystemResource fsr = new FileSystemResource("application.xml");
 		try {
-			 defaultListableBeanFactory=
-					new DefaultListableBeanFactory(fsr);
-			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
+			defaultListableBeanFactory= new DefaultListableBeanFactory(fsr);
+			BeanA beana=(BeanA)defaultListableBeanFactory.getBean("beana");
+			logger.info("beana - {}",beana.getName());
 			//log.debug(a.toString()+"");
 		} catch (Exception e) {
 			e.printStackTrace();

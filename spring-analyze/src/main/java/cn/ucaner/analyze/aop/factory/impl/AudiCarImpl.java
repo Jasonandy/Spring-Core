@@ -2,6 +2,17 @@ package cn.ucaner.analyze.aop.factory.impl;
 
 import cn.ucaner.analyze.aop.factory.Car;
 
+/**
+* @Package：cn.ucaner.analyze.aop.factory.impl   
+* @ClassName：AudiCarImpl   
+* @Description：   <p> Car实例</p>
+* @Author： -    
+* @CreatTime：2018年5月15日 下午3:19:35   
+* @Modify By：   
+* @ModifyTime：  2018年5月15日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class AudiCarImpl implements Car {
 	
     @Override

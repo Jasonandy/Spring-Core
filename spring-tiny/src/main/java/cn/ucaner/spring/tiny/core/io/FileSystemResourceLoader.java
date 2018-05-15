@@ -15,7 +15,7 @@ import java.io.File;
 public class FileSystemResourceLoader extends DefaultResourceLoader {
 
 	/*
-	 * @see com.lonton.core.io.ResourceLoader#getResource(java.lang.String)
+	 * @see cn.ucaner.spring.tiny.core.io.ResourceLoader#getResource(java.lang.String)
 	 * 默认的DefaultResourceLoader返回的就是FileSystemResource，本来我们只需要在这里调用
 	 * 父类的getResource()方法就行了，但是考虑未来可能修改DefaultResourceLoader，我将其在写
 	 * 一遍，让其依赖于FileSystemResource而不是DefaultResourceLoader

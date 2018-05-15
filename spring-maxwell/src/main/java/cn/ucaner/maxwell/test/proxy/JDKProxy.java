@@ -15,16 +15,18 @@ import java.lang.reflect.Proxy;
  */
 public class JDKProxy {
 
+	/**
+	 * @Description: java.lang.reflect.Proxy 
+	 */
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
-        UserService proxy = (UserService) Proxy.newProxyInstance(userService.getClass().getClassLoader(),
-                new Class[]{UserService.class}, new Handler(userService));
+        //java.lang.reflect.Proxy   JDK动态代理
+        UserService proxy = (UserService) Proxy.newProxyInstance(userService.getClass().getClassLoader(),new Class[]{UserService.class}, new Handler(userService));
         proxy.printName();
     }
 
 }
 //outputs 
-
-//Method printName is proxyed.
+//[MaxWell-Handler]Method printName is proxyed.
 //Name is xxxx
 //Age: 18

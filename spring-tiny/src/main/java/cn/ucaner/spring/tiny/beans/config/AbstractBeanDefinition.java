@@ -16,7 +16,9 @@ import java.util.List;
 public abstract class AbstractBeanDefinition implements BeanDefinition {
 
     private final String SCOPE_DEFAULT = "single";
+    
     private String scope = SCOPE_DEFAULT;
+    
     private Object beanClass;
 
     List<String> dependentBeanDefinitions=new ArrayList<>();

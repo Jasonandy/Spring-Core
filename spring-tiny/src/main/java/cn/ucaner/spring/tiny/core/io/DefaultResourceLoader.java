@@ -20,6 +20,12 @@ public class DefaultResourceLoader implements ResourceLoader{
 	public Resource getResource(String path){
 		return new FileSystemResource(path);
 	}
+
+	@Override
+	public ClassLoader getClassLoader() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

@@ -15,18 +15,18 @@ import org.springframework.aop.framework.AopContext;
  */
 public class SimpleAopBean {
 
-    public void boo() {
-        System.out.println("testA执行");
+    public void testA() {
+        System.out.println("SimpleAopBean:testA执行->testB()");
         testB();
     }
 
     public void testB() {
-        System.out.println("testB执行");
-        ((SimpleAopBean) AopContext.currentProxy()).testC();
+        System.out.println("SimpleAopBean:testB执行");
+        ((SimpleAopBean) AopContext.currentProxy()).testC();//SimpleMethodInterceptor被调用: testC
     }
 
     public void testC() {
-        System.out.println("testC执行");
+        System.out.println("SimpleAopBean-currentProxy:testC执行");//last
     }
 
 }

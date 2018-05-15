@@ -1,15 +1,8 @@
 package cn.ucaner.analyze.data.datasource.proxy;
 
-import com.mysql.jdbc.ResultSetImpl;
-
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 
 public class PrepareStatementProxy extends ProxyTemplate<PreparedStatement> {

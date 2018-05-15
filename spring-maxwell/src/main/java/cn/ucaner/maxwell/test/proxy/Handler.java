@@ -6,7 +6,9 @@ import java.lang.reflect.Method;
 /**
 * @Package：cn.ucaner.maxwell.test.proxy   
 * @ClassName：Handler   
-* @Description：   <p> {@link java.lang.reflect.InvocationHandler}实现. </p>
+* @Description：   <p> {@link java.lang.reflect.InvocationHandler}实现. 
+* https://www.cnblogs.com/LCcnblogs/p/6823982.html
+* </p>
 * @Author： - Jason    
 * @CreatTime：2018年5月4日 上午10:45:58   
 * @Modify By：   
@@ -16,6 +18,9 @@ import java.lang.reflect.Method;
  */
 public class Handler implements InvocationHandler {
 
+	/*
+	 * 目标对象
+	 */
     private final Object target;
 
     public Handler(Object target) {
@@ -25,7 +30,7 @@ public class Handler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         String name = method.getName();
-        System.out.println("Method " + name + " is proxyed.");
+        System.out.println("[MaxWell-Handler]Method " + name + " is proxyed.");
         return method.invoke(target, args);
     }
 

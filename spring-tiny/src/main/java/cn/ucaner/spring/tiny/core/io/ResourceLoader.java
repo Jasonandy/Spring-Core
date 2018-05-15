@@ -12,5 +12,17 @@ package cn.ucaner.spring.tiny.core.io;
  */
 public interface ResourceLoader{
 	
+	/**
+	 * "classpath*:"  ResourceUtils.CLASSPATH_URL_PREFIX
+	 */
+    String CLASSPATH_URL_PREFIX ="classpath*:" ; 
+	
 	Resource getResource(String location);
+	
+	/**
+	 * @Description: getClassLoader
+	 * @return ClassLoader
+	 * @Autor: jasonandy - jasonandy@hotmial.com
+	 */
+	ClassLoader getClassLoader(); 
 }

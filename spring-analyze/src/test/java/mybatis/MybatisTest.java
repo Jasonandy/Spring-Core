@@ -30,7 +30,6 @@ public class MybatisTest {
             MybatisUserEntityMapper userEntityMapper =  session.getMapper(MybatisUserEntityMapper.class);
             userEntityMapper.insert(userEntity);
             //使用statement执行SQL
-//            session.insert("com.houlu.java.spring.data.mybatis.mapper.MybatisUserEntityMapper.insert",userEntity);
 //            session.commit();
 
             userEntity = userEntityMapper.selectByPrimaryKey(178l);

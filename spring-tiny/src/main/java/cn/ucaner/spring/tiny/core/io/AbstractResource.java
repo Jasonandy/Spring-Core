@@ -38,7 +38,7 @@ public abstract class AbstractResource implements Resource{
 
 	@Override
 	public File getFile() throws IOException {
-		throw new FileNotFoundException(getDescription() + " cannot be resolved to absolute file path");
+		throw new FileNotFoundException(getDescription() + " cannot be resolved to absolute file path . - [Exception:tinySpring]");
 	}
 
 	

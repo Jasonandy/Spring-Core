@@ -13,8 +13,16 @@ package cn.ucaner.maxwell.test.proxy;
  */
 public interface UserService {
 
+	/**
+	 * @Description: printName 
+	 * @Autor: jason - jasonandy@hotmail.com
+	 */
     void printName();
 
+    /**
+	 * @Description: printAge 
+	 * @Autor: jason - jasonandy@hotmail.com
+	 */
     void printAge();
 
 }

@@ -6,11 +6,24 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
+/**
+* @Package：cn.ucaner.analyze.aop.aspect   
+* @ClassName：AroundAdvice   
+* @Description：   <p> 环绕通知
+* AspectJ : https://blog.csdn.net/csdn_terence/article/details/55804421
+* </p>
+* @Author： - Jason   
+* @CreatTime：2018年5月15日 下午3:02:43   
+* @Modify By：   
+* @ModifyTime：  2018年5月15日
+* @Modify marker：   
+* @version    V1.0
+ */
 @Component
 @Aspect
 public class AroundAdvice {
 
-    @Around("chinese()")
+    @Around("eat()")
     public Object verify(ProceedingJoinPoint point) throws Throwable {
         System.out.println("aroundAop 开始执行 ");
 
@@ -21,13 +34,13 @@ public class AroundAdvice {
         Object returnObj = point.proceed(args);
         System.out.println("执行结果:"+returnObj);
         System.out.println("aroundAop 执行结束 ");
-
         return returnObj;
     }
 
     @Pointcut("execution(* cn.ucaner.analyze.aop.bean.Chinese.eat(..))")
-    public void chinese() {}
-
+    public void eat() {
+    	System.out.println("execution(* cn.ucaner.analyze.aop.bean.Chinese.eat(..))");
+    }
 
 
 }

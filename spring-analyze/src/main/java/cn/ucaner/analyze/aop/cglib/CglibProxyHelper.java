@@ -41,7 +41,7 @@ public class CglibProxyHelper implements MethodInterceptor {
 	public Object intercept(Object obj, Method method, Object[] args,MethodProxy proxy) throws Throwable {
 		
 		/**
-		 * 日志记录（线程不安全）
+		 * 日志记录（线程不安全）  StringBuffer 线程安全
 		 */
         StringBuilder builder = new StringBuilder();
         if (args != null) {

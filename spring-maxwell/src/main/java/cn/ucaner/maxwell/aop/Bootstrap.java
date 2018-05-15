@@ -15,21 +15,27 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Bootstrap {
 
+	/**
+	 * @Description: ClassPathXmlApplicationContext
+	 * @param args void
+	 * @Autor: jason - jasonandy@hotmail.com
+	 */
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:config.xml");
-        SimpleAopBean bean = context.getBean(SimpleAopBean.class);
-        bean.testB();
-        System.out.println(bean.getClass().getSimpleName());
-        System.out.println(context.getId());
+        SimpleAopBean bean = context.getBean(SimpleAopBean.class);//SimpleAopBean   xml注入
+        bean.testB();//invoke()
+        
+        
+        System.out.println(bean.getClass().getSimpleName());//SimpleAopBean$$EnhancerBySpringCGLIB$$b61487fc
+        System.out.println(context.getId());//org.springframework.context.support.ClassPathXmlApplicationContext@799f7e29
         context.close();
     }
 
 }
 //Outputs
-
 //SimpleMethodInterceptor被调用: testB
-//testB执行
+//SimpleAopBean:testB执行
 //SimpleMethodInterceptor被调用: testC
-//testC执行
-//SimpleAopBean$$EnhancerBySpringCGLIB$$e066b201
-//org.springframework.context.support.ClassPathXmlApplicationContext@69d0a921
+//SimpleAopBean-currentProxy:testC执行
+//SimpleAopBean$$EnhancerBySpringCGLIB$$b61487fc
+//org.springframework.context.support.ClassPathXmlApplicationContext@799f7e29

@@ -1,11 +1,16 @@
 package cn.ucaner.analyze.guava.collection;
 
-import com.google.common.collect.*;
-import jdk.nashorn.internal.ir.annotations.Immutable;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multiset;
 
 public class CollectionDemo {
 

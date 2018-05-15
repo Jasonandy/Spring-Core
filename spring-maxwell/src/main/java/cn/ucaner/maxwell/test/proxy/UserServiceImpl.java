@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void printName() {
-        System.out.println("Name is XXX");
+        System.out.println("Name is xxx");
         printAge();
     }
 

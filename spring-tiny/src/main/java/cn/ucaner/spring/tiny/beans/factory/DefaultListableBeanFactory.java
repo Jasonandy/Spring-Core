@@ -36,18 +36,23 @@ import cn.ucaner.spring.tiny.exception.XmlConfigurationErrorException;
 * @Modify marker：   
 * @version    V1.0
  */
-public class DefaultListableBeanFactory extends AbstractBeanFactory
-        implements BeanDefinitionRegistry, ResourceLoaderBeanFactory ,ListableBeanFactory{
+public class DefaultListableBeanFactory extends AbstractBeanFactory implements BeanDefinitionRegistry, ResourceLoaderBeanFactory ,ListableBeanFactory{
 
     private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
+    
     protected Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>(256);
+    
     protected Resource resource;
     static {
         PropertyConfigurator.configure("log4j.properties");
     }
 
-    /*
-     * 当然了，我们所使用的ioc都是具有加载资源的能力的,所以给定两个基本的构造方法 你可以给工厂直接注入资源，当然也可以直接注入资源地址，因为它是具备资源加载的能力的
+    /**
+     * Ioc都是具有加载资源的能力的,所以给定两个基本的构造方法
+     * 可以给工厂直接注入资源，当然也可以直接注入资源地址，因为它是具备资源加载的能力的
+    * DefaultListableBeanFactory. 
+    * @param resource
+    * @throws Exception
      */
     public DefaultListableBeanFactory(Resource resource) throws Exception {
         this.resource = resource;
@@ -234,4 +239,9 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
         }
         return bean;
     }
+
+	@Override
+	public ClassLoader getClassLoader() {
+		return null;
+	}
 }

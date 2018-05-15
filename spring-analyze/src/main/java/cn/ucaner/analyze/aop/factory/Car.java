@@ -1,11 +1,15 @@
 package cn.ucaner.analyze.aop.factory;
 
-import org.springframework.stereotype.Component;
-
 /**
 * @Package：cn.ucaner.analyze.aop.factory   
 * @ClassName：Car   
 * @Description：   <p> 定义接口 - Car </p>
+* @Author： -    
+* @CreatTime：2018年5月15日 下午3:19:17   
+* @Modify By：   
+* @ModifyTime：  2018年5月15日
+* @Modify marker：   
+* @version    V1.0
  */
 public interface Car {
 

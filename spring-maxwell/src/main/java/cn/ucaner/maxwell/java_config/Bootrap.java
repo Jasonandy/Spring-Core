@@ -19,6 +19,11 @@ import cn.ucaner.maxwell.base.SimpleBean;
  */
 public class Bootrap {
 
+	/**
+	 * @Description: java方式注入
+	 * @param args void
+	 * @Autor: jason -jasonandy@hotmail.com
+	 */
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SimpleBeanConfig.class);
         SimpleBean simpleBean = context.getBean(SimpleBean.class);
@@ -31,3 +36,13 @@ public class Bootrap {
 //Outputs 
 //importaware
 //Jason
+//[org.springframework.context.annotation.internalConfigurationAnnotationProcessor, 
+// org.springframework.context.annotation.internalAutowiredAnnotationProcessor, 
+// org.springframework.context.annotation.internalRequiredAnnotationProcessor,
+// org.springframework.context.annotation.internalCommonAnnotationProcessor,
+// org.springframework.context.event.internalEventListenerProcessor,
+// org.springframework.context.event.internalEventListenerFactory,
+// simpleBeanConfig, 
+// org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,
+// org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,
+// cn.ucaner.maxwell.java_config.StudentConfig, student, simpleBean]

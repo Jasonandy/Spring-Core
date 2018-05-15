@@ -17,9 +17,9 @@ public class C3P0Client {
 
 
         String sql = "INSERT INTO jdbc_user " +"(user_name,sex,age,email,phone,version,last_modify_time,create_time)"+
-                "VALUES ('test001',null,null,null,null,null,null,null)";
+                "VALUES ('springCore',null,null,'jasonandy@hotmail.com',null,null,null,null)";
         stmt.executeUpdate(sql);
-        Thread.sleep(10000);
+        Thread.sleep(10);
 
         conn.close();
 

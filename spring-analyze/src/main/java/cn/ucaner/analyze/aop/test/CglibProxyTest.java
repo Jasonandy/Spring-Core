@@ -1,6 +1,5 @@
 package cn.ucaner.analyze.aop.test;
 
-import cn.ucaner.analyze.aop.bean.ChineseImpl;
 import cn.ucaner.analyze.aop.cglib.CglibProxyHelper;
 import cn.ucaner.analyze.aop.factory.impl.AudiCarImpl;
 
