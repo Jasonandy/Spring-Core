@@ -31,7 +31,7 @@ public class TestAnnotation {
 		//log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
 		//PropertyConfigurator.configure("log4j.properties");
 		//注入一个resource
-		FileSystemResource fsr = new FileSystemResource("resource/application.xml");
+		FileSystemResource fsr = new FileSystemResource("application.xml");
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);
