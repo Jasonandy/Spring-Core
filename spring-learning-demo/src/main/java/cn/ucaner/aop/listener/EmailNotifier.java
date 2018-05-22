@@ -1,6 +1,5 @@
 package cn.ucaner.aop.listener;
 
-import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 
 import cn.ucaner.aop.event.EmailEvent;
