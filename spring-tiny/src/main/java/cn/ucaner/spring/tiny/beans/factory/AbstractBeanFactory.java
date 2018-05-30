@@ -27,11 +27,15 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 
     private Logger logger = LoggerFactory.getLogger(AbstractBeanFactory.class);
 
-    // 创建完成bean池，我会将创建已完成的bean放入其中
-    protected Map<String, Object> completedBeanPool = new HashMap<>();
+    /**
+     * 已经完成创建的bean - 创建完成bean池，我会将创建已完成的bean放入其中
+     */
+    protected Map<String, Object> completedBeanPool = new HashMap<String, Object>();
 
-    // 创建bean新生池，将正在创建的bean放入其中
-    protected Map<String, Object> babyBeanPool = new HashMap<>();
+    /**
+     * 有相关依赖还没有创建的bean - 创建bean新生池，将正在创建的bean放入其中
+     */
+    protected Map<String, Object> babyBeanPool = new HashMap<String, Object>();
 
     @Override
     public Object getBean(String name) throws BeansException {

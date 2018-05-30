@@ -6,7 +6,11 @@ import java.util.List;
 /**
 * @Package：cn.ucaner.spring.tiny.beans.config   
 * @ClassName：AbstractBeanDefinition   
-* @Description：   <p> AbstractBeanDefinition</p>
+* @Description：   <p> AbstractBeanDefinition
+* 抽象类：基础bean-基石
+* 
+* 
+* </p>
 * @Author： - cwt   
 * @Modify By：   
 * @ModifyTime：  2018年4月27日
@@ -15,13 +19,20 @@ import java.util.List;
  */
 public abstract class AbstractBeanDefinition implements BeanDefinition {
 
+	//默认scope值，bean的作用范围
     private final String SCOPE_DEFAULT = "single";
     
+    /**
+     * single 
+     */
     private String scope = SCOPE_DEFAULT;
     
     private Object beanClass;
 
-    List<String> dependentBeanDefinitions=new ArrayList<>();
+    /**
+     * dependentBeanDefinitions 依赖的bean
+     */
+    List<String> dependentBeanDefinitions=new ArrayList<String>();
 
     /*
      * @param bean的作用域
@@ -66,7 +77,7 @@ public abstract class AbstractBeanDefinition implements BeanDefinition {
         }
         if (!(beanClassObject instanceof Class)) {
             throw new IllegalStateException(
-                    "Bean class name [" + beanClassObject + "] has not been resolved into an actual Class");
+                    "Bean class name [" + beanClassObject + "] has not been resolved into an actual Class [Tiny Spring.]");
         }
         return (Class<?>) beanClassObject;
     }

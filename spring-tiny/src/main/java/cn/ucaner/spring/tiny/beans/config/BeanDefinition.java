@@ -23,6 +23,10 @@ import cn.ucaner.spring.tiny.enums.ConfigurableBeanFactory;
 * IoC容器的初始化包括BeanDefinition的Resource定位、载入和注册这三个基本的过程.
 * 
 * 抽象数据结构 - 属性参数，构造器参数，以及其他具体的参数
+* 
+* https://blog.csdn.net/lh513828570/article/details/74078804
+* 
+* 
 * </p>
 * @Author： - chenwentao   
 * @Modify By：   
@@ -30,10 +34,10 @@ import cn.ucaner.spring.tiny.enums.ConfigurableBeanFactory;
 * @Modify marker：   
 * @version    V1.0
  */
-public interface BeanDefinition {
+public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement{
 
 	/**
-	 * 单例或原型
+	 * 单例或原型scope值-单例  scope值-非单例
 	 */
     String SCOPE_SINGLETON = ConfigurableBeanFactory.SCOPE_SINGLETON.getBeanScope();
     String SCOPE_PROTOTYPE = ConfigurableBeanFactory.SCOPE_PROTOTYPE.getBeanScope();
@@ -47,8 +51,10 @@ public interface BeanDefinition {
 
     void setScope(String scope);
 
+    //是否为单例
     boolean isSingleton();
 
+    //返回对bean定义的可读描述
     String getDescription();
 
     Class<?> getBeanClass();

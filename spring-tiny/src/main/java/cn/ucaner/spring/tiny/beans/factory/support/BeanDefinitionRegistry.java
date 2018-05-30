@@ -14,10 +14,19 @@ import cn.ucaner.spring.tiny.beans.config.BeanDefinition;
  */
 public interface BeanDefinitionRegistry {
 	
-	// 关键 -> 往注册表中注册一个新的 BeanDefinition 实例 
+	/**
+	 * @Description: 往注册表中注册一个新的 BeanDefinition 实例  
+	 * @param beanName
+	 * @param beanDefinition void
+	 * @Autor: Jason - Jasonandy@hotmail.com
+	 */
 	void registerBeanDefinition(String beanName, BeanDefinition beanDefinition);
 	
-	//移除注册表中已注册的 BeanDefinition 实例
+	/**
+	 * @Description: 移除注册表中已注册的 BeanDefinition 实例 
+	 * @param beanName void
+	 * @Autor: Jason - Jasonany@hotmail.com
+	 */
 	void removeBeanDefinition(String beanName);
 
 }

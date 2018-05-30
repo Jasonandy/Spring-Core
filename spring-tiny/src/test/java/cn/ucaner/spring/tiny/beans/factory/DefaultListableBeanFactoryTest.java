@@ -64,7 +64,6 @@ public class DefaultListableBeanFactoryTest {
     }
 
     @Test
-    // TODO
     public void testGetBean() {
         People people;
         try {

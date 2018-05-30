@@ -7,6 +7,17 @@ import java.sql.ResultSet;
 
 import cn.ucaner.analyze.data.datasource.bean.ProxyContext;
 
+/**
+* @Package：cn.ucaner.analyze.data.datasource.proxy   
+* @ClassName：ProxyFactory   
+* @Description：   <p> ProxyFactory </p>
+* @Author： -    
+* @CreatTime：2018年5月28日 上午9:13:21   
+* @Modify By：   
+* @ModifyTime：  2018年5月28日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ProxyFactory {
 
 

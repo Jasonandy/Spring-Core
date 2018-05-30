@@ -33,7 +33,7 @@ public class AutowireApplicationContextTest {
     @Test
     public void testAutowireApplicationContext() {
         // 注入一个resource
-        FileSystemResource fsr = new FileSystemResource("resource/application.xml");
+        FileSystemResource fsr = new FileSystemResource("src/main/resource/application.xml");
         try {
             AutowireApplicationContext aac = new AutowireApplicationContext(fsr);
             AutowiredBean autowiredbean=aac.getBean("autowiredbean", AutowiredBean.class);

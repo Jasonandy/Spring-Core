@@ -38,11 +38,21 @@ import cn.ucaner.spring.tiny.exception.XmlConfigurationErrorException;
  */
 public class DefaultListableBeanFactory extends AbstractBeanFactory implements BeanDefinitionRegistry, ResourceLoaderBeanFactory ,ListableBeanFactory{
 
-    private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
+    private static Logger logger = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
     
+    /**
+     * beanDefinitionMap
+     */
     protected Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>(256);
     
+    /**
+     * Resource
+     */
     protected Resource resource;
+    
+    /**
+     * static load log4j.cof
+     */
     static {
         PropertyConfigurator.configure("log4j.properties");
     }
@@ -51,7 +61,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory implements B
      * Ioc都是具有加载资源的能力的,所以给定两个基本的构造方法
      * 可以给工厂直接注入资源，当然也可以直接注入资源地址，因为它是具备资源加载的能力的
     * DefaultListableBeanFactory. 
-    * @param resource
+    * @param resource 直接注入资源
     * @throws Exception
      */
     public DefaultListableBeanFactory(Resource resource) throws Exception {
@@ -59,13 +69,27 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory implements B
         refresh();
     }
 
+    /**
+    * DefaultListableBeanFactory. 
+    * @param location    直接注入资源地址
+    * @throws Exception
+     */
     public DefaultListableBeanFactory(String location) throws Exception {
         this.resource = getResource(location);
         refresh();
     }
 
-    /*
-     * 资源的问题解决了，我们还得具备读取beandefinition的能力,本来是应该继承的容器中就具有了 读取的能力，这里为了简便，我们使用内部类实现
+    /**
+    * @Package：cn.ucaner.spring.tiny.beans.factory   
+    * @ClassName：ResourceReaderBeanFactory   
+    * @Description：   <p> 资源的问题解决了，我们还得具备读取beandefinition的能力,
+    * 本来是应该继承的容器中就具有了 读取的能力，这里为了简便，我们使用内部类实现</p>
+    * @Author： - Jason   
+    * @CreatTime：2018年5月30日 上午10:56:44   
+    * @Modify By：   
+    * @ModifyTime：  2018年5月30日
+    * @Modify marker：   
+    * @version    V1.0
      */
     protected class ResourceReaderBeanFactory extends XmlBeanDefinitionReader {
         public ResourceReaderBeanFactory(BeanDefinitionRegistry registry) {
@@ -73,84 +97,108 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory implements B
         }
     }
 
-    /*
+    /**
      * 在这里我们已经获取到了beanName and beanDefinition，只需将其注入到Map集合中就行了
      */
     @Override
     public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) {
-        // 这里我就不对这两个参数进行验证了，直接将其put进map集合
-        // System.out.println("正在注册"+beanName+beanDefinition);
+    	logger.debug("[Tiny-Spring]注册beanMame-{},beanDefinition-{} By Jason.",beanName,beanDefinition);
         beanDefinitionMap.put(beanName, beanDefinition);
     }
 
+    /**
+     * 移除beanDefinition by Name
+     */
     @Override
     public void removeBeanDefinition(String beanName) {
         if (beanDefinitionMap.get(beanName) != null) {
             beanDefinitionMap.remove(beanName);
         } else {
-            log.warn("需要移除的bean不存在！");
+        	logger.warn("[Tiny-Spring] Remove BeanDefinition By Name -{} not Find BeanDefinition.", beanName);
         }
     }
 
-    // 给定一个地址
+    /**
+     * File Path get Resource
+     */
     @Override
     public Resource getResource(String location) {
-        // 这里因为是通过地址获取资源，所以我们返回一个FileSystemResource
         return new FileSystemResource(location);
     }
 
-    // 好了，最后给定一个初始化方法
+    /**
+     * @Description: refresh init
+     * @throws Exception void
+     * @Autor: Jason - Jasonandy@hotmail.com
+     */
     protected void refresh() throws Exception {
-        // 在这里，我们完成容器的初始化
-        // 1.资源我们已经在构造方法中获取
-        // 2.资源的解析
+
+    	/**
+    	 * 在这里，我们完成容器的初始化
+    	 * One.资源我们已经在构造方法中获取
+    	 * Two.资源的解析
+    	 * Three.容器的注册方法会被自动调用，此时注册就完成了
+    	 */
         int count = new ResourceReaderBeanFactory(this).loadBeanDefinitions(resource);
-        // 3.容器的注册方法会被自动调用，此时注册就完成了
-        log.info("一共初注册了" + count + "个beanDefinition");
+        logger.info("[Tiny-Spring] All Register beanDefinition Numbers count- {} - By JASON[加载成功] ",count);
     }
 
+    
+    /**
+     * Tiny-Spring Core CreateBean by beanName and beanDefinition 
+     * 如何通过beanDefinition获得一个完整的bean实例（我们已经获取了bean的依赖集合）
+     * 反射获取方法，进行bean的注入
+     */
     @Override
     protected Object createBean(String beanNmae, BeanDefinition beanDefinition) throws CircularDependException {
-        // 如何通过beanDefinition获得一个完整的bean实例（我们已经获取了bean的依赖集合）
-        // 当createBean的时候，它所依赖的bean一定已经创建完成了，并且已经放入了完成池
-        // 反射获取方法，进行bean的注入
-        List<String> depends = beanDefinition.getDepends();
-        Class<?> cl = beanDefinition.getBeanClass();
+
+    	List<String> depends = beanDefinition.getDepends();
+        Class<?> claz = beanDefinition.getBeanClass();
         Object bean = null;
         try {
-            // 通过反射生成bean的实例
-            bean = cl.newInstance();
-        } catch (Exception e1) {
-            log.error("反射异常");
+            //通过反射生成bean的实例
+            bean = claz.newInstance();
+        } catch (Exception e) {
+        	logger.error("[Tiny-Spring]Reflect exception clazName-{} [反射失败]",claz);
         }
+        
+        /**
+         * Bean依赖其他bean 需要注入
+         */
         if (depends != null && depends.size() >= 1) {
-            // 此时的bean还不完整，还没有注入它的依赖，我们将它放入新生池
+        	/**
+        	 * 此时的bean还不完整，还没有注入它的依赖，我们将它放入新生池
+        	 */
             babyBeanPool.put(beanNmae, bean);
             for (String depend : depends) {
                 if (babyBeanPool.get(depend) != null) {
-                    log.error("beanDefinition中存在循环依赖");
+                	logger.error("[Tiny-Spring] beanDefinition 已经存在依赖关系,has exist in babyBeanPool.");
                     throw new CircularDependException();
                 }
-                // 在这里分两种情况，先确定需要注入的是基本类型还是bean
-                if (isBaiscType(depend)) {
-                    // 注入基本属性
+                /**
+                 * 在这里分两种情况，先确定需要注入的是基本类型还是bean
+                 */
+                if (isBaiscType(depend)) {//基本类型
                     try {
                         bean = beanBasicTypeAutowired(bean, depend);
                     } catch (Exception e) {
                         // 不做任何处理
                     }
                 } else {
+                	
+                	/**
+                	 * set 反射注入Bean 获取bean的class对象 通过反射获取方法
+                	 */
                     String methodName = "set" + depend.substring(0, 1).toUpperCase() + depend.substring(1);
-                    // 获取bean的class对象
-                    // 通过反射获取方法
                     try {
-                        Method method = cl.getMethod(methodName, completedBeanPool.get(depend).getClass());
+                    	//setBean( clazz )
+                        Method method = claz.getMethod(methodName, completedBeanPool.get(depend).getClass());
                         // 调用set方法完成注入
                         method.invoke(bean, completedBeanPool.get(depend));
                     } catch (NoSuchMethodException e) {
-                        log.error("需要获取得bean中没有" + methodName + "方法");
+                    	logger.error("[Tiny-Spring]需要获取得bean中没有ModthodName-{}方法.",methodName);
                     } catch (Exception e) {
-                        log.error("获取到了set方法，没有能获取到需要注入的bean:" + depend);
+                    	logger.error("[Tiny-Spring]获取到了Setter:{}方法,没有能获取到需要注入的Bean:{}.",methodName,depend);
                     }
                 }
 
@@ -159,17 +207,28 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory implements B
         return bean;
     }
 
-    // 通过name获取beanDefinition
+    /**
+     * 通过name获取beanDefinition
+     */
     @Override
     public BeanDefinition getBeanDefinition(String beanDefinitionName) {
         return beanDefinitionMap.get(beanDefinitionName);
     }
 
+    /**
+     * IS  HAS Contains BeanDefinition . 
+     */
     @Override
     public boolean containsBeanDefintion(String beanDefinitionName) {
         return beanDefinitionMap.get(beanDefinitionName) != null;
     }
 
+    /**
+     * @Description: 注入的时候已经定义好格式  - 可以自定义    .claz.type.method
+     * @param depend
+     * @return boolean
+     * @Autor: Jason - JASONANDY@HOTMAIL.COM
+     */
     private boolean isBaiscType(String depend) {
         return depend.charAt(0) == '.';
     }
@@ -179,11 +238,20 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory implements B
             Method method = bean.getClass().getMethod(methodName, parameterTypes);
             method.invoke(bean, args);
         } catch (Exception e) {
-            log.error("基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配\n"+"方法名："+methodName+"参数："+args);
+        	logger.error("基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配\n"+"方法名："+methodName+"参数："+args);
         }
         return null;
     }
 
+    
+    /**
+     * @Description: 注入基本类型数据
+     * @param bean   bean
+     * @param depend depend
+     * @return Object
+     * @throws XmlConfigurationErrorException Object
+     * @Autor: Jason - Jasonandy@hotmail.com
+     */
     private Object beanBasicTypeAutowired(Object bean, String depend) throws XmlConfigurationErrorException {
         // 将字符串进行分割解析 name+type+value
         String realDepend = depend.substring(1);
@@ -235,7 +303,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory implements B
                 throw new XmlConfigurationErrorException("beanName：" + bean.getClass().getSimpleName() + "的类型配置错误");
             }
         } catch (ClassNotFoundException e) {
-            log.error("错误的基本类型：" + type);
+        	logger.error("错误的基本类型：" + type);
         }
         return bean;
     }

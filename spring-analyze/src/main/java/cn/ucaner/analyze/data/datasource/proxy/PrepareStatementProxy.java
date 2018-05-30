@@ -5,6 +5,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 
+/**
+* @Package：cn.ucaner.analyze.data.datasource.proxy   
+* @ClassName：PrepareStatementProxy   
+* @Description：   <p> PrepareStatementProxy </p>
+* @Author： -    
+* @CreatTime：2018年5月28日 上午9:13:13   
+* @Modify By：   
+* @ModifyTime：  2018年5月28日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class PrepareStatementProxy extends ProxyTemplate<PreparedStatement> {
 
 

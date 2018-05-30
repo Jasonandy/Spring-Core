@@ -11,6 +11,17 @@ import javax.sql.DataSource;
 
 import cn.ucaner.analyze.data.datasource.proxy.ProxyFactory;
 
+/**
+* @Package：cn.ucaner.analyze.data.datasource.bean   
+* @ClassName：ProxyDataSource   
+* @Description：   <p> ProxyDataSource </p>
+* @Author： -    
+* @CreatTime：2018年5月28日 上午9:12:47   
+* @Modify By：   
+* @ModifyTime：  2018年5月28日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ProxyDataSource implements DataSource{
 
     private DataSource dataSource;
