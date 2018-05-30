@@ -17,13 +17,19 @@ import java.lang.reflect.Proxy;
  */
 public class DefaultProxyObject extends AbstractProxy{
 
+	/**
+	 * getProxyObject
+	 * JDK 动态生成
+	 */
 	@Override
 	public  Object getProxyObject(Object obj, Aop aop) {
-		return Proxy.newProxyInstance(obj.getClass().getClassLoader(), 
-				obj.getClass().getInterfaces(), 
-				new DefaultAOPHandler(obj,aop));
+		return Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), new DefaultAOPHandler(obj,aop));
 	}
 
+
+	/**
+	 * getProxyObjectByType 
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T getProxyObjectByType(Class<T> clz, Aop aop){

@@ -17,24 +17,32 @@ import java.lang.reflect.Method;
  */
 public class DefaultAOPHandler extends AbstractAOPHandler{
 	
+	/**
+	 * aop 对象
+	 */
 	private Aop aop;
 
-	public DefaultAOPHandler(Object object, Aop aop)
-	{
+	/**
+	* DefaultAOPHandler. 
+	* @param object
+	* @param aop
+	 */
+	public DefaultAOPHandler(Object object, Aop aop){
 		super(object);
 		this.aop=aop;
-		
 	}
 
+	/**
+	 * invoke
+	 */
 	@Override
-	public Object invoke(Object proxy, Method method, Object[] args)
-			throws Throwable {
+	public Object invoke(Object proxy, Method method, Object[] args)throws Throwable {
 		Object ret=null;
-		//修改的地方在这里哦
-		this.aop.before(proxy, method, args);
+		this.aop.before(proxy, method, args);//before
+		
 		ret=method.invoke(object, args);
-		//修改的地方在这里哦
-		this.aop.after(proxy, method, args);
+		
+		this.aop.after(proxy, method, args);//after
 		return ret;
 	}
 	

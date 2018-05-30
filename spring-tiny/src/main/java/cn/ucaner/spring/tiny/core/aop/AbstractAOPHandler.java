@@ -18,12 +18,22 @@ import java.lang.reflect.Method;
  */
 public abstract class AbstractAOPHandler implements InvocationHandler{
 	
+	/**
+	 * Object
+	 */
 	protected Object object;
 	
+	/**
+	* AbstractAOPHandler. 
+	* @param object
+	 */
 	public AbstractAOPHandler(Object object){
 		this.object=object;
 	}
 
+	/**
+	 * invoke
+	 */
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {

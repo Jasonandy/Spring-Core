@@ -26,19 +26,21 @@ import cn.ucaner.spring.tiny.core.io.FileSystemResource;
  */
 public class AopTest {
 	
-	private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
+	private static Logger logger = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
+	
+	/**
+	 * DefaultListableBeanFactory 可列表bean工厂
+	 */
 	DefaultListableBeanFactory defaultListableBeanFactory;
 	
 	@Test
 	public void testDefaultListableBeanFactoryResource(){
-		PropertyConfigurator.configure("classpath:*/log4j.properties");
-		//注入一个resource
-		FileSystemResource fsr=new FileSystemResource("resource\\test.xml");
+		PropertyConfigurator.configure("src/test/resource/log4j.properties");
+		FileSystemResource fsr=new FileSystemResource("src/test/resource/aoptest.xml");
 		try {
-			 defaultListableBeanFactory=
-					new DefaultListableBeanFactory(fsr);
+			defaultListableBeanFactory= new DefaultListableBeanFactory(fsr);
 			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
-			log.debug(a.toString());
+			logger.debug(a.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -46,8 +48,7 @@ public class AopTest {
 	
 	@Test
 	public void OriginalAopTest(){
-		jiekou j=new DefaultProxyObject().getProxyObjectByType(BeanA.class, new Aop()
-		{	
+		jiekou j=new DefaultProxyObject().getProxyObjectByType(BeanA.class, new Aop(){	
 			@Override
 			public void before(Object proxy, Method method, Object[] args) {
 				System.out.println("before");	
@@ -59,24 +60,23 @@ public class AopTest {
 			}
 	});
 		j.aaa();
- }
+	}
 
 	
 	@Test
 	public void AopAndIoc() throws Exception{
-		PropertyConfigurator.configure("log4j.properties");
-		//注入一个resource
-		FileSystemResource fsr=new FileSystemResource("src\\resource\\test.xml");
+		PropertyConfigurator.configure("src/test/resource/log4j.properties");
+		/**
+		 * 注入一个resource
+		 */
+		FileSystemResource fsr=new FileSystemResource("src/test/resource/aoptest.xml");
 		try {
-			 defaultListableBeanFactory=
-					new DefaultListableBeanFactory(fsr);
+			 defaultListableBeanFactory=new DefaultListableBeanFactory(fsr);
 		} catch (Exception e) {
-			
 			e.printStackTrace();
 		}
 		System.out.println(defaultListableBeanFactory==null);
-		DefaultProxyObject dpo=
-				defaultListableBeanFactory.getBean("DefaultProxyObject", DefaultProxyObject.class);
+		DefaultProxyObject dpo=defaultListableBeanFactory.getBean("DefaultProxyObject", DefaultProxyObject.class);
 		AspectJBeanA ajb=defaultListableBeanFactory.getBean("aspectbeana",AspectJBeanA.class );
 		jiekou j=dpo.getProxyObjectByType(BeanA.class,ajb);
 		j.aaa();

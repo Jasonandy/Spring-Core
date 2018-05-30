@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright  JasonInternational </p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason. The Source On WebSite .  https://github.com/Jasonandy/Spring-Core </p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.spring.tiny.beans.factory.support;
 
 import java.util.Map;
@@ -18,8 +27,14 @@ import org.slf4j.LoggerFactory;
  */
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
 
+	/**
+	 * 获取日志记录器
+	 */
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    /**
+     * singletonObjects 单例bean容器 - ConcurrentHashMap 并发修改
+     */
     private final Map<String, Object> singletonObjects = new ConcurrentHashMap<String, Object>(64);
 
     @Override

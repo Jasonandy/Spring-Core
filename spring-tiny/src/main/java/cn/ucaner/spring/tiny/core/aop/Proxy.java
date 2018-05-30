@@ -15,6 +15,14 @@ package cn.ucaner.spring.tiny.core.aop;
 * @version    V1.0
  */
 public interface Proxy {
-	//获得代理类的对象
+	
+	
+	/**
+	 * @Description: 获得代理类的对象
+	 * @param obj
+	 * @param AOP
+	 * @return Object
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	Object getProxyObject(Object obj,Aop AOP);
 }

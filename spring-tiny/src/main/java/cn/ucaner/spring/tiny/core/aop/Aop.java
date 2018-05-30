@@ -17,8 +17,22 @@ import java.lang.reflect.Method;
  */
 public interface Aop{
 	
+	/**
+	 * @Description: after 
+	 * @param proxy
+	 * @param method
+	 * @param args void
+	 * @Autor: JASON - Jasonandy@hotmail.com
+	 */
 	void after(Object proxy, Method method, Object[] args);
 		
+	/**
+	 * @Description: before 
+	 * @param proxy
+	 * @param method
+	 * @param args void
+	 * @Autor: Jason - jasonandy@hotmail.com
+	 */
 	void before(Object proxy, Method method, Object[] args);
 
 }

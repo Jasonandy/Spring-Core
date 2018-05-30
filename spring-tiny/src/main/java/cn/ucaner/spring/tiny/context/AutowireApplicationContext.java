@@ -22,7 +22,7 @@ import cn.ucaner.spring.tiny.core.io.Resource;
  */
 public class AutowireApplicationContext extends DefaultListableBeanFactory implements AutowireCapableBeanFactory{
 
-	private static Logger log = LoggerFactory.getLogger(AutowireApplicationContext.class);
+	private static Logger logger = LoggerFactory.getLogger(AutowireApplicationContext.class);
 	
 	/**
 	 * 加载log4j的配置
@@ -43,12 +43,19 @@ public class AutowireApplicationContext extends DefaultListableBeanFactory imple
 		refresh();
 	}
 	
-	/*
-	 * 继承ComponentHandle，拥有解析@component注解的能力
+	/**
+	* @Package：cn.ucaner.spring.tiny.context   
+	* @ClassName：AutowireAnnotationBeanDefinition   
+	* @Description：   <p> 继承ComponentHandle，拥有解析@component注解的能力 </p>
+	* @Author： - Jason   
+	* @CreatTime：2018年5月30日 下午9:01:35   
+	* @Modify By：   
+	* @ModifyTime：  2018年5月30日
+	* @Modify marker：   
+	* @version    V1.0
 	 */
 	private class AutowireAnnotationBeanDefinition extends AnnotationBeanDefinitionReader{
-		public AutowireAnnotationBeanDefinition(BeanDefinitionRegistry registry)
-		{
+		public AutowireAnnotationBeanDefinition(BeanDefinitionRegistry registry){
 			super(registry);
 		}
 	}
@@ -57,7 +64,7 @@ public class AutowireApplicationContext extends DefaultListableBeanFactory imple
 	@Override
 	protected void refresh() throws Exception {
 		int count=new AutowireAnnotationBeanDefinition(this).loadBeanDefinitions(resource);
-		log.info("一共初注册了:"+count+"个beanDefinition");
+		logger.info("[Tiny-Spring] Total Register Count-{} beanDfinition.",count);
 	}
 
 	
@@ -66,3 +73,4 @@ public class AutowireApplicationContext extends DefaultListableBeanFactory imple
         
     }
 }
+ 

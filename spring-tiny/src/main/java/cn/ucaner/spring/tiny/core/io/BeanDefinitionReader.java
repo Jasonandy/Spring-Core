@@ -14,8 +14,18 @@ import cn.ucaner.spring.tiny.beans.factory.support.BeanDefinitionRegistry;
  */
 public interface BeanDefinitionReader {
 	
+	/**
+	 * @Description: getBeanDefinitionRegistry  beanDefinition 注册器
+	 * @return BeanDefinitionRegistry
+	 * @Autor: Jason - Jasonandy@hotmai.com
+	 */
 	BeanDefinitionRegistry getBeanDefinitionRegistry();
 	
+	/**
+	 * @Description: getResourceLoader 
+	 * @return ResourceLoader
+	 * @Autor: Jason - Jasonandy@hotmai.com
+	 */
 	ResourceLoader getResourceLoader();
 	
 	/**

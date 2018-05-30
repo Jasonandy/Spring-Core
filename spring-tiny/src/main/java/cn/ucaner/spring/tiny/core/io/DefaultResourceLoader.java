@@ -23,7 +23,6 @@ public class DefaultResourceLoader implements ResourceLoader{
 
 	@Override
 	public ClassLoader getClassLoader() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	

@@ -16,9 +16,19 @@ package cn.ucaner.spring.tiny.enums;
  */
 public enum ConfigurableBeanFactory{
 	
+	/**
+	 *singleton 单例 
+	 */
 	SCOPE_SINGLETON("singleton"),
+	
+	/**
+	 * prototype
+	 */
 	SCOPE_PROTOTYPE("prototype");
 	
+	/**
+	 * 域
+	 */
 	private String BeanScope;
 	
 	ConfigurableBeanFactory(String BeanScope){
@@ -28,4 +38,5 @@ public enum ConfigurableBeanFactory{
 	public String getBeanScope() {
 		return BeanScope;
 	}
+	
 }

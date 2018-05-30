@@ -36,48 +36,81 @@ public class AnnotationBeanDefinitionReader extends XmlBeanDefinitionReader {
         return doLoadBeanDefinitionsFromAnnotation(resource);
     }
 
-    // 扫描所有的包
+    /**
+     * @Description: 扫描所有的包 
+     * @return
+     * @throws Exception int
+     * @Autor: Jason - jasonandy@hotmail.com
+     */
     public int loadBeanDefinitions() throws Exception {
         return doLoadBeanDefinitions(null);
     }
 
-    // 通过注解生成beanDefinition
+    /**
+     * @Description: 通过注解生成beanDefinition 
+     * @param resource
+     * @return
+     * @throws Exception int
+     * @Autor: jason - jasonandy@hotmail.com
+     */
     public int doLoadBeanDefinitionsFromAnnotation(Resource resource) throws Exception {
-        // 加载xml中定义的beanDefinition
+    	/**
+    	 * 加载xml中定义的beanDefinition
+    	 */
         int count = super.doLoadBeanDefinitions(resource);
-        // 获得包名，将包下的类进行解析
+
+        /**
+         * 获得包名，将包下的类进行解析
+         */
         List<String> PackageNames = XmlParser.getComponentPackageNames();
-        // 读取
+        
+        /**
+         * eg: cn.ucaner.aa....   扫描包下面的所有包
+         */
         if (Assert.isNotEmpty(PackageNames)) {
             for (String PackageName : PackageNames) {
-                // 获得包下的所有类名
+                /**
+                 * 获取包下的所有类名
+                 */
                 List<String> ClassNames = PackageUtil.getClassName(PackageName);
                 if (Assert.isNotEmpty(ClassNames)) {
                     for (String ClassName : ClassNames) {
                         BeanDefinition beanDefinition = new DefaultBeanDefinition();
-                        // 获得beanDefinition的beanClass
+                        /**
+                         * 获得beanDefinition的beanClass
+                         */
                         Class<?> beanClass = Class.forName(ClassName);
-                        // 验证是否有Component注解
+                        /**
+                         * 验证是否有Component注解
+                         */
                         Component com = beanClass.getAnnotation(Component.class);
+                        
+                        //component 注解
                         if (com != null) {
                             beanDefinition.setBeanClass(beanClass);
-                            // 还要获取它的依赖
+                            
+                            /**
+                             *  获取它的依赖
+                             *  getFields()：获得某个类的所有的公共（public）的字段，包括父类中的字段。 
+                             *  getDeclaredFields()：获得某个类的所有声明的字段，即包括public、private和proteced，但是不包括父类的申明字段
+                             */
                             Field[] fields = beanClass.getDeclaredFields();
                             if (fields.length > 0) {
                                 for (Field f : fields) {
                                     Autowired autowired = f.getAnnotation(Autowired.class);
                                     if (autowired != null) {
-                                        //
                                         beanDefinition.addDepend(autowired.value());
                                     }
                                 }
                             }
-                            // 默认使用全部小写的方式
-                            String beanDefinitionName =
-                                    (ClassName.substring(ClassName.lastIndexOf(".") + 1)).toLowerCase();
+                            
+                            /**
+                             * 默认使用全部小写的方式 注入到beanDefinition 
+                             */
+                            String beanDefinitionName =(ClassName.substring(ClassName.lastIndexOf(".") + 1)).toLowerCase();
                             beanDefinitions.put(beanDefinitionName, beanDefinition);
                             count++;
-                        }
+                        }//
                     }
                 }
             }

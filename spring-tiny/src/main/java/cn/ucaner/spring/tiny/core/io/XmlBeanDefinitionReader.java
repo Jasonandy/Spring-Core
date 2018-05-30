@@ -23,14 +23,19 @@ import cn.ucaner.spring.tiny.beans.factory.support.XmlParser;
  */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
-    //暂时保存beanDefinition，稍后在doLoadBeanDefinitions方法中注册到beanFactory
-    protected Map<String, BeanDefinition> beanDefinitions = new HashMap<>();
+	/**
+	 * 暂时保存beanDefinition，稍后在doLoadBeanDefinitions方法中注册到beanFactory
+	 */
+    protected Map<String, BeanDefinition> beanDefinitions = new HashMap<String, BeanDefinition>();
 
-    // 默認使用DefaultBeanDefinition
-    // 本來是應該講這個beanDefinition對象傳遞給xmlparser，在這裡先簡單實現
+    /**
+     * 默認使用DefaultBeanDefinition
+     * 本來是應該講這個beanDefinition對象傳遞給xmlparser，在這裡先簡單實現
+     */
     @SuppressWarnings("unused")
     private BeanDefinition beanDefinition;
 
+    
     public XmlBeanDefinitionReader(BeanDefinitionRegistry registry) {
         super(registry);
         beanDefinition = new DefaultBeanDefinition();
@@ -41,21 +46,40 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         this.beanDefinition = beanDefinition;
     }
 
-    // spring有四個加載bean定義的方法，這裡只實現一個
+    /**
+     * Spring 有四种加载Bean的方式  此处实现一种
+     */
     @Override
     public int loadBeanDefinitions(Resource resource) throws Exception {
         return doLoadBeanDefinitions(resource);
     }
 
+    /**
+     * @Description: doLoadBeanDefinitions 
+     * @param resource
+     * @return
+     * @throws Exception int
+     * @Autor: Jason - Jasonandy@hotmail.com
+     */
     public int doLoadBeanDefinitions(Resource resource) throws Exception {
-        // 在加載beandefinition之前，現getxml資源的Document對象
+    	
+    	/**
+    	 * 加载beanDefinition GetXml Document
+    	 */
         Document doc = doLoadDocument(resource);
-        // 在這裡講doc進行解析
+
+        /**
+         * 解析Document
+         */
         beanDefinitions = XmlParser.parser(doc);
-        // 再次可以選擇注入一個什麼類型的bean
+        
+        /**
+         * 再次可以选择注入一个什么类型的Bean
+         */
         for (Entry<String, BeanDefinition> beanDefinition : beanDefinitions.entrySet()) {
-            // 講這個bean進行註冊,這是一個藉口方法，當某個容器需要註冊功能的時候，在繼承這個類
-            // key is the name of bean,value is the beanDefinition
+        	/**
+        	 * key is the name of bean,value is the beanDefinition
+        	 */
             registry.registerBeanDefinition(beanDefinition.getKey(), beanDefinition.getValue());
         }
         return beanDefinitions.size();

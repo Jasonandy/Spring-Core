@@ -1,3 +1,12 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright  JasonInternational </p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created by Jason. The Source On WebSite .  https://github.com/Jasonandy/Spring-Core </p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.spring.tiny.core.io;
 
 import java.io.File;
@@ -25,7 +34,12 @@ public class FileSystemResourceLoader extends DefaultResourceLoader {
 		return new FileSystemResource(path);
 	}
 	
-	//添加通过File对象获取Resource
+	/**
+	 * @Description: 添加通过File对象获取Resource 
+	 * @param file
+	 * @return Resource
+	 * @Autor:JASON - jasonandy@hotmail.com
+	 */
 	public Resource getResource(File file){
 		return new FileSystemResource(file);
 	}

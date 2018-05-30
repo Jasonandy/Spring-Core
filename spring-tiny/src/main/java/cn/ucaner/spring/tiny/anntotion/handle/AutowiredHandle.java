@@ -24,8 +24,6 @@ import cn.ucaner.spring.tiny.ioc.annotation.Autowired;
  */
 public class AutowiredHandle {
 	
-	
-	
 	/**
 	 * logger 获取日志记录器
 	 */

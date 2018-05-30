@@ -1,10 +1,9 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright JasonInternational</p>
+ *  <P> Copyright  JasonInternational </p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2018年5月15日 上午11:54:46</p>
- *  <p> Created by Jason</p>
+ *  <p> Created by Jason. The Source On WebSite .  https://github.com/Jasonandy/Spring-Core </p>
  *  </body>
  * </html>
  */

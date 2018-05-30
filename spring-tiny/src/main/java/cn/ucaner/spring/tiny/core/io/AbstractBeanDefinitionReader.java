@@ -14,9 +14,16 @@ import cn.ucaner.spring.tiny.beans.factory.support.BeanDefinitionRegistry;
  */
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
 	
+	/**
+	 * BeanDefinitionRegistry
+	 */
 	protected final BeanDefinitionRegistry registry;
 
+	/**
+	 * ResourceLoader
+	 */
 	private ResourceLoader resourceLoader;
+	
 	
 	public AbstractBeanDefinitionReader(BeanDefinitionRegistry registry){
 		this.registry=registry;

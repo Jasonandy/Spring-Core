@@ -16,7 +16,7 @@ import java.util.Map;
 /**     
 * @Package：cn.ucaner.spring.tiny.core.io   
 * @ClassName：PathMatcher   
-* @Description：   <p> PathMatcher </p>
+* @Description：   <p> PathMatcher Spring 匹配器接口</p>
 * @Author： - Jason   
 * @CreatTime：2018年5月15日 下午12:03:01   
 * @Modify By：   
@@ -26,7 +26,6 @@ import java.util.Map;
 */
 public interface PathMatcher {
 	
-
 	boolean isPattern(String path);
 
 	boolean match(String pattern, String path);
