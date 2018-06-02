@@ -23,18 +23,42 @@ package cn.ucaner.spring.tiny.beans.config;
 */
 public interface AttributeAccessor {
 	
-    //设置元数据 
+	/**
+	 * @Description: 设置元数据 
+	 * @param name
+	 * @param value void
+	 * @Autor: JASON - jasonandy@hotmail.com
+	 */
 	void setAttribute(String name, Object value);
 	
-    //获取元数据 
+	/**
+	 * @Description: 获取元数据  
+	 * @param name
+	 * @return Object
+	 * @Autor: JASON - jasonandy@hotmail.com
+	 */
     Object getAttribute(String name);
     
-    //删除元数据 
+    /**
+     * @Description: 删除元数据 
+     * @param name
+     * @return Object
+     * @Autor: JASON - jasonandy@hotmail.com
+     */
     Object removeAttribute(String name);
     
-    //是否含有元数据
+    /**
+     * @Description: 是否含有元数据 
+     * @param name
+     * @return boolean
+     * @Autor: jason - jasonandy@hotmail.com
+     */
     boolean hasAttribute(String name);
     
-    //获取元数据的name数组
+    /**
+     * @Description: 获取元数据的name数组
+     * @return String[]
+     * @Autor:Jason - jasonandy@hotmail.com
+     */
     String[] attributeNames();
 }

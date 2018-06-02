@@ -19,7 +19,9 @@ import java.util.List;
  */
 public abstract class AbstractBeanDefinition implements BeanDefinition {
 
-	//默认scope值，bean的作用范围
+	/**
+	 * 默认scope值，bean的作用范围
+	 */
     private final String SCOPE_DEFAULT = "single";
     
     /**
@@ -34,7 +36,7 @@ public abstract class AbstractBeanDefinition implements BeanDefinition {
      */
     List<String> dependentBeanDefinitions=new ArrayList<String>();
 
-    /*
+    /**
      * @param bean的作用域
      */
     @Override
@@ -52,18 +54,25 @@ public abstract class AbstractBeanDefinition implements BeanDefinition {
         return this.scope.equals(SCOPE_DEFAULT);
     }
 
+    /**
+     * 返回对bean定义的可读描述
+     */
     @Override
     public String getDescription() {
         return null;
     }
 
-    // 获取依赖的beanDefinition
+    /**
+     * 获取依赖的beanDefinition
+     */
     @Override
     public List<String> getDepends() {
         return dependentBeanDefinitions;
     }
 
-    // 添加beanDefinition依赖
+    /**
+     *  添加beanDefinition依赖
+     */
     @Override
     public void addDepend(String dependName) {
         dependentBeanDefinitions.add(dependName);

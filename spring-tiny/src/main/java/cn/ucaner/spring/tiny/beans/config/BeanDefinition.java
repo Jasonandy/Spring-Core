@@ -42,22 +42,58 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement{
     String SCOPE_SINGLETON = ConfigurableBeanFactory.SCOPE_SINGLETON.getBeanScope();
     String SCOPE_PROTOTYPE = ConfigurableBeanFactory.SCOPE_PROTOTYPE.getBeanScope();
 
-    //获得依赖BeanDefinition的名字
+    /**
+     * @Description: 获得依赖BeanDefinition的名字
+     * @return List<String>
+     */
     List<String> getDepends();
 
+    /**
+     * @Description: 添加依赖
+     * @param depend void
+     * @Autor:jason - jasonandy@hotmail.com
+     */
     void addDepend(String depend);
 
+    /**
+     * @Description: 获取作用域
+     * @return String
+     * @Autor: Jason - jasonandy@hotmail.com
+     */
     String getScope();
 
+    /**
+     * @Description: 设置作用域
+     * @param scope void
+     * @Autor: Jason - jasonandy@hotmail.com
+     */
     void setScope(String scope);
 
-    //是否为单例
+    /**
+     * @Description: 是否为单例
+     * @return boolean
+     * @Autor: Jason - jasonandy@hotmail.com
+     */
     boolean isSingleton();
 
-    //返回对bean定义的可读描述
+    /**
+     * @Description: 返回对bean定义的可读描述
+     * @return String
+     * @Autor: Jason - jasonandy@hotmail.com
+     */
     String getDescription();
 
+    /**
+     * @Description: 获取beanClazz
+     * @return Class<?>
+     * @Autor: Jason - jasonandy@hotmail.com
+     */
     Class<?> getBeanClass();
 
+    /**
+     * @Description: 设置beanClazz
+     * @param beanClass void
+     * @Autor: wubin - binwu@pcitech.com
+     */
     void setBeanClass(Class<?> beanClass);
 }

@@ -23,7 +23,11 @@ package cn.ucaner.spring.tiny.beans.config;
 */
 public interface BeanMetadataElement {
 	
-	//获取当前元素的配置源bean对象
+	/**
+	 * @Description: 获取当前元素的配置源bean对象
+	 * @return Object
+	 * @Autor:JASON - jasonandy@hotmail.com
+	 */
     Object getSource();
 
 }
