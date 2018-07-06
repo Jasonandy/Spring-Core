@@ -17,7 +17,7 @@
 	<!-- 全局配置 -->
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	  <org.springframework.version>3.2.9.RELEASE</org.springframework.version>
+	  <org.springframework.version>5.0.6.RELEASE</org.springframework.version>
 	  <maven.compiler.source>1.8</maven.compiler.source>
 	  <maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -56,6 +56,14 @@
 	         <artifactId>spring-aspects</artifactId>
 	         <version>${org.springframework.version}</version>
 	     </dependency>
+	     
+	     <!-- JavaX - inject -->
+		 <dependency>
+		     <groupId>javax.inject</groupId>
+		     <artifactId>javax.inject</artifactId>
+		     <version>1</version>
+		 </dependency>
+	     
 	
 	     <!-- Spring AOP -->
 	     <dependency>
