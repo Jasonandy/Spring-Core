@@ -13,7 +13,7 @@
 	<!-- 包扫描、只要标注了@Controller、@Service、@Repository，@Component -->
 	 <!-- <context:component-scan base-package="cn.ucaner.analyze" use-default-filters="false"></context:component-scan> -->
 	<bean id="person" class="cn.ucaner.analyze.bean.Person"  scope="prototype" >
-		<property name="age" value="${}"></property>
+		<property name="age" value="${person.age}"></property>
 		<property name="name" value="zhangsan"></property>
 	</bean>
 	

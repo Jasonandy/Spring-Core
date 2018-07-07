@@ -14,9 +14,9 @@ import cn.ucaner.analyze.bean.Person;
 
 @ComponentScans(
 		value = {
-				@ComponentScan(value="com.atguigu",includeFilters = {
-/*						@Filter(type=FilterType.ANNOTATION,classes={Controller.class}),
-						@Filter(type=FilterType.ASSIGNABLE_TYPE,classes={BookService.class}),*/
+				@ComponentScan(value="cn.ucaner.analyze",includeFilters = {
+						/*@Filter(type=FilterType.ANNOTATION,classes={Controller.class}),*/
+						@Filter(type=FilterType.ASSIGNABLE_TYPE,classes={cn.ucaner.analyze.data.mybatis.entity.UserEntity.class}),
 						@Filter(type=FilterType.CUSTOM,classes={MyTypeFilter.class})
 				},useDefaultFilters = false)	
 		}

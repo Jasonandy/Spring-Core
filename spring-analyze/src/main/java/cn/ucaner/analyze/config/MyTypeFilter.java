@@ -27,8 +27,7 @@ public class MyTypeFilter implements TypeFilter {
 	 * metadataReaderFactory:可以获取到其他任何类信息的
 	 */
 	@Override
-	public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory)
-			throws IOException {
+	public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory)throws IOException {
 		//获取当前类注解的信息
 		AnnotationMetadata annotationMetadata = metadataReader.getAnnotationMetadata();
 		//获取当前正在扫描的类的类信息
@@ -41,7 +40,7 @@ public class MyTypeFilter implements TypeFilter {
 		if(className.contains("er")){
 			return true;
 		}
-		return false;
+		return true;
 	}
 
 }

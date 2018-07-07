@@ -12,10 +12,7 @@ public interface UserJdbcDao {
 
     public void create(UserEntity userEntity);
 
-    
     public List<UserEntity> getUserByName(String userName);
-
-
 
     public UserEntity getUser(String name);
 

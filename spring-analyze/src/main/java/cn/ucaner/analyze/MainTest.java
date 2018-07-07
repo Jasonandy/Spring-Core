@@ -10,9 +10,10 @@ public class MainTest {
 	
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-//		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-//		Person bean = (Person) applicationContext.getBean("person");
-//		System.out.println(bean);
+		
+	/*	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:beans.xml");
+		Person bean = (Person) applicationContext.getBean("person");
+		System.out.println(bean);*/
 		
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
 		Person bean = applicationContext.getBean(Person.class);
