@@ -11,7 +11,17 @@ import org.springframework.util.StringValueResolver;
 /**
 * @Package：cn.ucaner.analyze.bean   
 * @ClassName：Red   
-* @Description：   <p> Red </p>
+* @Description：   <p> Red 
+* 
+* 
+* ApplicationContextAware:  上下文的处理
+* 
+* 
+* BeanNameAware: 创建对象- 时候 - 给bean取的啥名字
+* 
+* 
+* EmbeddedValueResolverAware: 嵌入式的值解析器
+* </p>
 * @Author： - Jason   
 * @CreatTime：2018年7月6日 下午11:11:39   
 * @Modify By：   
@@ -19,10 +29,10 @@ import org.springframework.util.StringValueResolver;
 * @Modify marker：   
 * @version    V1.0
  */
-@Component
+@Component //加入ioc容器
 public class Red implements ApplicationContextAware,BeanNameAware,EmbeddedValueResolverAware {
 	
-	private ApplicationContext applicationContext;
+	private ApplicationContext applicationContext; //存起来 
 
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
@@ -35,13 +45,20 @@ public class Red implements ApplicationContextAware,BeanNameAware,EmbeddedValueR
 		System.out.println("当前bean的名字："+name);
 	}
 
+	/**
+	 * 用来解析字符串
+	 * ${}
+	 * 
+	 * #{} Spring
+	 */
 	@Override
 	public void setEmbeddedValueResolver(StringValueResolver resolver) {
-		String resolveStringValue = resolver.resolveStringValue("你好 ${os.name} 我是 #{20*18}");
+		String resolveStringValue = resolver.resolveStringValue("当前的操作系统为:${os.name} 我是 #{20*18}");
 		System.out.println("解析的字符串："+resolveStringValue);
 	}
 
-
-
+	public ApplicationContext getApplicationContext() {
+		return applicationContext;
+	}
 
 }

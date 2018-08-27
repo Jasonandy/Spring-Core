@@ -39,13 +39,15 @@ public class MainConfig2 {
 	 * session：同一个session创建一个实例
 	 * 
 	 * 懒加载：
-	 * 		单实例bean：默认在容器启动的时候创建对象；
-	 * 		懒加载：容器启动不创建对象。第一次使用(获取)Bean创建对象，并初始化；
+	 * 		单实例bean：默认在容器启动的时候创建对象
+	 * 		懒加载：容器启动不创建对象。第一次使用(获取)Bean创建对象，并初始化； 
+	 * 
+	 * Lazy是容器启动的时候不会创建bean  第一次使用的时候才会创建并进行初始化 放入容器,之后的话不会添加了.
 	 * 
 	 */
-//	@Scope("prototype")
+//	@Scope("prototype") //prototype多例的话ioc启动不会创建bean  getObject的时候会创建      singleton单例  ioc容器启动的时候就创建放进去了    -- web环境的话 request[同一次请求]  - session[同一个session]  
 	@Lazy
-	@Bean("person")
+	@Bean("person") //默认都是单实例
 	public Person person(){
 		System.out.println("给容器中添加Person....");
 		return new Person("张三", 25);

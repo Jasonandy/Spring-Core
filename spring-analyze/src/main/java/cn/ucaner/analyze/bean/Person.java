@@ -22,10 +22,12 @@ public class Person {
 	
 	@Value("张三")
 	private String name;
-	@Value("#{20-2}")
+	
+	
+	@Value("#{20-2}") //SpEl表达式 
 	private Integer age;
 	
-	@Value("${person.nickName}")
+	@Value("${person.nickName}")  //占位符取出数据
 	private String nickName;
 	
 	

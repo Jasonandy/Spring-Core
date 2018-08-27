@@ -16,6 +16,7 @@
 		<setting name="mapUnderscoreToCamelCase" value="false"/>
 	</settings>
 
+	<!--  插件数据   -->
 	<plugins>
 		<plugin interceptor="cn.ucaner.analyze.data.mybatis.interceptor.SQLStatsInterceptor" />
 	</plugins>

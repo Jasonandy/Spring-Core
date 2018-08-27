@@ -11,8 +11,12 @@ package cn.ucaner.analyze.bean;
 * @Modify marker：   
 * @version    V1.0
  */
+//@Component  可以@Bean
 public class Color {
 	
+	/**
+	 * 
+	 */
 	private Car car;
 
 	public Car getCar() {

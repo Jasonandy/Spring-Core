@@ -46,7 +46,7 @@ import cn.ucaner.analyze.dao.BookDao;
  * 4）、自定义组件想要使用Spring容器底层的一些组件（ApplicationContext，BeanFactory，xxx）；
  * 		自定义组件实现xxxAware；在创建对象的时候，会调用接口规定的方法注入相关组件；Aware；
  * 		把Spring底层一些组件注入到自定义的Bean中；
- * 		xxxAware：功能使用xxxProcessor；
+ * 		xxxAware：功能使用xxxProcessor；  - 后置处理器做的处理
  * 			ApplicationContextAware==》ApplicationContextAwareProcessor；
  */
 @Configuration
@@ -68,7 +68,7 @@ public class MainConifgOfAutowired {
 	 * @return Color
 	 * @Autor: Jason
 	 */
-	@Bean
+	@Bean //@bean 方法参数会从容里面拿到
 	public Color color(Car car){
 		Color color = new Color();
 		color.setCar(car);

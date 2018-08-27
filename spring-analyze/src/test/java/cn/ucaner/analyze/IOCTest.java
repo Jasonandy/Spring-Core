@@ -12,8 +12,9 @@ import cn.ucaner.analyze.config.MainConfig;
 import cn.ucaner.analyze.config.MainConfig2;
 
 public class IOCTest {
-	AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
 	
+	//主配置类
+	AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
 	
 	@Test
 	public void testImport(){

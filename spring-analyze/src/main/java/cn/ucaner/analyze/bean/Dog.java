@@ -46,4 +46,8 @@ public class Dog implements ApplicationContextAware {
 		this.applicationContext = applicationContext;
 	}
 
+	public ApplicationContext getApplicationContext() {
+		return applicationContext;
+	}
+
 }
