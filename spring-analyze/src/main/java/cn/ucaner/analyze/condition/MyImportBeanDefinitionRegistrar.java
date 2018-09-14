@@ -7,6 +7,17 @@ import org.springframework.core.type.AnnotationMetadata;
 
 import cn.ucaner.analyze.bean.RainBow;
 
+/**
+* @Package：cn.ucaner.analyze.condition   
+* @ClassName：MyImportBeanDefinitionRegistrar   
+* @Description：   <p> 可以用来做判断 - 是否注册的逻辑</p>
+* @Author： - Jason   
+* @CreatTime：2018年9月14日 下午12:33:00   
+* @Modify By：   
+* @ModifyTime：  2018年9月14日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {
 
 	/**

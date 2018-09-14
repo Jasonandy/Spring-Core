@@ -37,9 +37,13 @@ public class AroundAdvice {
         return returnObj;
     }
 
+    /**
+     * @Description: execution
+     * @Autor: Jason
+     */
     @Pointcut("execution(* cn.ucaner.analyze.aop.bean.Chinese.eat(..))")
     public void eat() {
-    	System.out.println("execution(* cn.ucaner.analyze.aop.bean.Chinese.eat(..))");
+    	System.out.println("execution(* cn.ucaner.analyze.aop.bean.Chinese.(..))");
     }
 
 

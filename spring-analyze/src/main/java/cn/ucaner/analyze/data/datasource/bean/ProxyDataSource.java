@@ -26,13 +26,14 @@ public class ProxyDataSource implements DataSource{
 
     private DataSource dataSource;
 
-    private PrintWriter logWriter;
+	private PrintWriter logWriter;
 
 	@Override
     public Connection getConnection() throws SQLException {
         ProxyContext proxyContext = new ProxyContext();
         proxyContext.setResultSetList(new ArrayList<>());
         proxyContext.setPreparedStatementList(new ArrayList<>());
+        logWriter.print("yes , this is vwery good do you know how to do it.");
         return ProxyFactory.getConnectionProxy(dataSource.getConnection(),proxyContext);
     }
 

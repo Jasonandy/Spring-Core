@@ -2,12 +2,20 @@ package cn.ucaner.analyze.data.datasource.proxy;
 
 
 import java.lang.reflect.Method;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
+/**
+* @Package：cn.ucaner.analyze.data.datasource.proxy   
+* @ClassName：ResultSetProxy   
+* @Description：   <p> ResultSetProxy 结果集合代理</p>
+* @Author： - Jason   
+* @CreatTime：2018年9月14日 下午12:34:54   
+* @Modify By：   
+* @ModifyTime：  2018年9月14日
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ResultSetProxy extends ProxyTemplate<ResultSet> {
 
     private int index = 0;

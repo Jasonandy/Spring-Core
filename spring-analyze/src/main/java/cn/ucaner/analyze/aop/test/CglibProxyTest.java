@@ -39,3 +39,9 @@ public class CglibProxyTest {
 //Call Method public java.lang.String cn.ucaner.analyze.aop.factory.impl.AudiCarImpl.echo(java.lang.String) - args:Parmas[0]=Jason,
 //[After method invoke.]
 //The Call Method Result public java.lang.String cn.ucaner.analyze.aop.factory.impl.AudiCarImpl.echo(java.lang.String) - result=Jason Hi cglib Proxy.
+
+
+//[Before method invoke .]
+//Call Method public java.lang.String cn.ucaner.analyze.aop.factory.impl.AudiCarImpl.echo(java.lang.String) - args:Parmas[0]=Jason,
+//[After method invoke.]
+//The Call Method Result public java.lang.String cn.ucaner.analyze.aop.factory.impl.AudiCarImpl.echo(java.lang.String) - result=Jason Hi cglib Proxy.

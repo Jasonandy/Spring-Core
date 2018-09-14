@@ -17,6 +17,9 @@ import java.sql.PreparedStatement;
  */
 public class ConnectionProxy extends ProxyTemplate<Connection> {
 
+	/**
+	 * invokePoint 调用-切入点
+	 */
     @Override
     public Object invokePoint(Object proxy, Method method, Object[] args) throws Exception {
         if ("prepareStatement".equals(method.getName())) {

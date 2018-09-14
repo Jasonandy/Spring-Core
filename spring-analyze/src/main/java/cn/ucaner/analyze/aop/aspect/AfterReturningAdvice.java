@@ -37,6 +37,10 @@ public class AfterReturningAdvice {
 
     }
 
+    /**
+     * @Description: 切面
+     * @Autor: Jason
+     */
     @Pointcut("execution(* cn.ucaner.analyze.aop.bean.Chinese.sayHello(..))")
     public void chinese() {}
 

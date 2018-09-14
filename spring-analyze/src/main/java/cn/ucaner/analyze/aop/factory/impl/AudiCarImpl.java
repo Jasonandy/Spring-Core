@@ -15,17 +15,27 @@ import cn.ucaner.analyze.aop.factory.Car;
  */
 public class AudiCarImpl implements Car {
 	
+	/**
+	 * 开车
+	 */
     @Override
     public void driveCar() {
         System.out.println("Audi car drive .");
     }
 
+    /**
+     * 销售汽车
+     */
     @Override
     public void saleCar() {
         System.out.println("Audi car sale .");
 
     }
-
+    
+    
+    /**
+     * ECHO
+     */
 	@Override
 	public String echo(String echo) {
 		return echo == null? "I'm Echo Method" : echo + " Hi cglib Proxy.";

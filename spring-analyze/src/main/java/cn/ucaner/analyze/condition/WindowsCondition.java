@@ -19,6 +19,9 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
  */
 public class WindowsCondition implements Condition {
 
+	/**
+	 * 判断是否为windows.
+	 */
 	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
 		Environment environment = context.getEnvironment();

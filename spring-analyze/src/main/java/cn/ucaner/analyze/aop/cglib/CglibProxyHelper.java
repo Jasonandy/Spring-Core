@@ -49,11 +49,18 @@ public class CglibProxyHelper implements MethodInterceptor {
                 builder.append("Parmas[" + i + "]=" + args[i].toString()+",");
             }
         }
+        
+        /**
+         * 前置处理器 -- do before 
+         */
         doBefore();// 方法调用前处理
         System.out.println("Call Method " + method.toString() + " - args:" + builder.toString());
 
         Object result = proxy.invokeSuper(obj, args);
 
+        /**
+         * 后置处理器  -- do after
+         */
         doAfter();//方法调用后处理
         if (result !=null) {
         	System.out.println("The Call Method Result " + method.toString() + " - result=" + result.toString());

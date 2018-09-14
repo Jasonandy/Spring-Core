@@ -18,15 +18,26 @@ import cn.ucaner.analyze.aop.factory.Car;
  */
 public class FactoryBeanTest {
 
-    private static ApplicationContext ctx;
+	/**
+	 * context - 容器
+	 */
+	private static ApplicationContext ctx;
 
+	/**
+	 * @Description: Main主函数.
+	 * @param args 
+	 * @Autor: Jason
+	 */
 	public static void main(String[] args) {
+		/**
+		 * xml 
+		 */
        // ctx = new ClassPathXmlApplicationContext("classpath*:/spring-config/spring-core.xml");
         ctx = new ClassPathXmlApplicationContext("classpath*:/spring-config/spring-core.xml");
+        
         /**
          * No qualifying bean of type [cn.ucaner.analyze.aop.factory.Car] is defined
          * 如果去掉Factory的注入的话 找不到CarImplBean实例
-         * 
          * @Component - CarFactory
          */
         Car car = ctx.getBean(Car.class);
@@ -35,12 +46,18 @@ public class FactoryBeanTest {
         
         /**
          * class cn.ucaner.analyze.aop.factory.CarFactory
+         * 
+         * 拿到的CarFactory
+         * 
          * 拿到的&是工厂Bean
          */
         System.out.println(ctx.getBean("&carFactory").getClass()); 
         
         /**
          * class cn.ucaner.analyze.aop.factory.impl.AudiCarImpl
+         * 
+         * 拿到的是Bean
+         * 
          * 拿到的是实例Bean
          */
         System.out.println(ctx.getBean("carFactory").getClass());  

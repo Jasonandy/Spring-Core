@@ -5,6 +5,17 @@ import java.lang.reflect.Method;
 
 import cn.ucaner.analyze.data.datasource.bean.ProxyContext;
 
+/**
+* @Package：cn.ucaner.analyze.data.datasource.proxy   
+* @ClassName：ProxyTemplate   
+* @Description：   <p> ProxyTemplate 代理类</p>
+* @Author： - Jason   
+* @CreatTime：2018年9月14日 下午12:35:12   
+* @Modify By：   
+* @ModifyTime：  2018年9月14日
+* @Modify marker：   
+* @version    V1.0
+ */
 public abstract class ProxyTemplate<T> implements InvocationHandler {
 
     private ProxyContext proxyContext;

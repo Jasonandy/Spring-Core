@@ -31,6 +31,7 @@ public class MyTypeFilter implements TypeFilter {
 		/**
 		 * 获取当前类注解的信息
 		 */
+		@SuppressWarnings("unused")
 		AnnotationMetadata annotationMetadata = metadataReader.getAnnotationMetadata();
 		/**
 		 * 获取当前正在扫描的类的类信息

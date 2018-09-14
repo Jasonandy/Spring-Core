@@ -8,6 +8,9 @@ import cn.ucaner.analyze.aop.factory.impl.AudiCarImpl;
 @Component
 public class CarFactory implements FactoryBean<Car> {
 
+	/**
+	 * CAR - 工厂bean. 
+	 */
     private Car car;
 
     
