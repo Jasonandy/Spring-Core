@@ -16,7 +16,8 @@
   <url>http://spring-learning-demo.ucaner.cn</url>
 
   <properties>
-        <spring.version>4.3.8.RELEASE</spring.version>
+  		<!-- Fixed 20181023 Upgrade org.springframework:spring-core to version 4.3.18 or later. For example: from github -->
+        <spring.version>[4.3.18,)</spring.version>
   </properties>
 
   <dependencies>
